@@ -1,0 +1,89 @@
+---
+layout: default
+---
+
+<section class="home contained">
+
+    {%- if page.title -%}
+
+    <header class="entry-header">
+        <h1 class="page-heading screen-reader-text">{{ page.title }}</h1>
+    </header>
+
+    {%- endif -%}
+
+    {%- if site.description -%}
+
+    <main class="entry-content no-top-margin">
+
+        {%- if site.description_tagline -%}
+        <p class="h0">{{ site.description_tagline }}</p>
+        {%- endif -%}
+
+        {%- if site.description -%}
+        <p class="h3 site-excerpt">{{ site.description }}</p>
+        {%- endif -%}
+
+    </main>
+
+    {%- else if site.content -%}
+
+    <main class="entry-content">
+
+        {{ content }}
+
+    </main>
+
+    {%- endif -%}
+
+    {%- if site.posts.size > 0 -%}
+
+    <aside class="entry-feed">
+
+        <h2 class="entry-list-heading screen-reader-text">{{ page.list_title | default: "Posts" }}</h2>
+        <ul class="entry-list">
+
+            {%- for post in site.posts -%}
+            <li>
+
+                <article class="post">
+
+                    <header class="entry-header">
+
+                        {% if post.thumbnail %}
+                        <div class="entry-thumbnail"
+                            style="background-image:url(/assets/images/thumbnails{{ post.thumbnail | relative_url }}.svg)">
+                        </div>
+                        {% endif %}
+
+                        <a class="entry-info {% if post.thumbnail %}with-thumbnail{% endif %}"
+                            href="{{ post.url | relative_url }}">
+                            {%- assign date_format = site.aemi.date_format | default: "%b %-d, %Y" -%}
+                            <span class="entry-meta">{{ post.date | date: date_format }}</span>
+                            <h3 class="entry-link">
+                                {{ post.title | escape }}
+                            </h3>
+                        </a>
+                    </header>
+
+                    {%- if site.show_excerpts -%}
+                    <main class="entry-content">
+                        {{ post.excerpt }}
+                    </main>
+                    {%- endif -%}
+
+                </article>
+            
+            </li>
+
+            {%- endfor -%}
+
+        </ul>
+
+        <!-- <p class="rss-subscribe">Subscribe <a href="{{ '/feed.xml' | relative_url }}">via RSS</a></p> -->
+
+    </aside>
+    
+    {%- endif -%}
+
+</section>

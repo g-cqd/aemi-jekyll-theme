@@ -1,0 +1,394 @@
+@import "fonts", "vars";
+
+
+.screen-reader-text {
+	clip-path: polygon(0 0, 1px 0, 1px 1px, 0 1px);
+	display: block;
+	height: 1px !important;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px !important;
+	word-wrap: normal !important;
+}
+
+/**
+ * Reset some basic elements
+ */
+body,
+.h0,
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h7,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    overflow-x: hidden;
+    color: var(--text-color);
+}
+
+/**
+ * Basic styling
+ */
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+.h0,
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h7,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
+%vertical-rhythm {
+    margin-bottom: var(--half-spacing-unit);
+}
+
+
+
+/**
+ * `main` element
+ */
+main {
+    display: block;
+    margin-top: var(--spacing-unit);
+    /* Default value of `display` of `main` element is 'inline' in IE 11. */
+}
+
+
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+
+/**
+ * Figures
+ */
+figure>img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul,
+ol {
+    margin-left: calc(var(--quarter-spacing-unit) * 3);
+}
+
+li {
+
+    >ul,
+    >ol {
+        margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Headings
+ */
+.h0,
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h7 {
+    font-family: $head-font-family;
+    font-weight: $heading-font-weight;
+
+    &:only-child {
+        margin-bottom: 0;
+    }
+}
+
+.h0 {
+    font-size: 3em;
+    letter-spacing: -0.033em;
+    line-height: 1;  
+}
+
+h1,
+.h1 {
+  font-size: 2.5em;
+  letter-spacing: -0.027em;
+  line-height: 1.05;
+}
+
+h2,
+.h2 {
+  font-size: 2em;
+  letter-spacing: -0.022em;
+  line-height: 1.1;
+}
+
+h3,
+.h3 {
+  font-size: 1.5em;
+  letter-spacing: -0.019em;
+  line-height: 1.15;
+}
+
+h4,
+.h4 {
+  font-size: 1.17em;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+h5,
+.h5 {
+  font-size: 1em;
+  letter-spacing: -0.011em;
+  line-height: 1.4;
+}
+
+h6,
+.h6 {
+  font-size: 0.83em;
+  letter-spacing: -0.004em;
+  line-height: 1.45;
+}
+
+.h7 {
+  font-size: 0.75rem;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+
+
+/**
+ * Links
+ */
+a {
+    color: var(--brand-color);
+    text-decoration: none;
+
+    &:visited {
+        color: var(--visited-color);
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    .social-media-list &:hover {
+        text-decoration: none;
+
+        .username {
+            text-decoration: underline;
+        }
+    }
+}
+
+/**
+ * Paragraphs
+ */
+p {
+    text-align: justify;
+    text-align-last: left;
+}
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: var(--lighten-text-color);
+    border-left: 4px solid var(--border-color);
+    padding-left: var(--half-spacing-unit);
+    font-style: italic;
+    text-align: justify;
+    text-align-last: left;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Code formatting
+ */
+
+pre,
+code,
+tt,
+var,
+kbd,
+samp {
+    font-size: 0.9em;
+    font-family: $mono-font-family;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+    tab-size: 4;
+}
+
+pre,
+code {
+    border: 1px solid var(--border-color);
+    border-radius: .35rem;
+    background-color: var(--background-color-lighten);
+}
+
+code {
+    padding: 1px 5px;
+}
+
+:not(pre) > code {
+    white-space: normal;
+    word-break: break-all;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: auto;
+
+    > code {
+        background: unset;
+        border: 0;
+        font-size: 1rem;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+
+/**
+ * Wrapper
+ */
+.contained {
+    max-width: -webkit-calc(#{$content-width} - var(--half-spacing-unit));
+    max-width: calc(#{$content-width} - var(--half-spacing-unit));
+    flex-basis: -webkit-calc(#{$content-width} - var(--half-spacing-unit));
+    flex-basis: calc(#{$content-width} - var(--half-spacing-unit));
+    flex-grow: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: var(--half-spacing-unit);
+    padding-left: var(--half-spacing-unit);
+
+    @include media-query($on-palm) {
+        max-width: -webkit-calc(#{$content-width} - var(--half-spacing-unit));
+        max-width: calc(#{$content-width} - var(--half-spacing-unit));
+        padding-right: var(--quarter-spacing-unit);
+        padding-left: var(--quarter-spacing-unit);
+    }
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+/**
+ * Icons
+ */
+
+.svg-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    fill: var(--lighten-text-color);
+    margin-right: 5px;
+    vertical-align: text-top;
+}
+
+.social-media-list {
+    li+li {
+        padding-top: 5px;
+    }
+}
+
+
+
+/**
+ * Tables
+ */
+table {
+    margin-bottom: $spacing-unit;
+    width: 100%;
+    text-align: $table-text-align;
+    color: var(--lighten-text-color);
+    border-collapse: collapse;
+    border: 1px solid var(--border-color);
+
+    tr {
+        &:nth-child(even) {
+            background-color: lighten($grey-color-light, 6%);
+        }
+    }
+
+    th,
+    td {
+        padding: ($spacing-unit / 3) ($spacing-unit / 2);
+    }
+
+    th {
+        background-color: lighten($grey-color-light, 3%);
+        border: 1px solid var(--border-color);
+        border-bottom-color: darken($grey-color-light, 12%);
+    }
+
+    td {
+        border: 1px solid var(--border-color);
+    }
+}

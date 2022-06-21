@@ -1,0 +1,43 @@
+<footer class="site-footer" aria-label="">
+
+    <div class="contained">
+
+        <div class="footer-header">
+            <a class="footer-heading" rel="author" href="{{ '/' | relative_url }}">
+                {% if site.logo %}
+                    <strong class="screen-reader-text">{{ site.title | escape }}</strong>
+                    <img src="{{ '/assets/images/logo/' | append: site.logo | relative_url }}" alt="{{ site.title | escape }}" >
+                {% else %}
+                    <strong class="h2">{{ site.title | escape }}</strong>
+                {% endif %}
+            </a>
+        </div>
+    
+        <div class="footer-content">
+            <div class="footer-cell">
+                <ul class="contact-list">
+                    <li class="p-name">
+                        {%- if site.author -%}
+                        {{ site.author | escape }}
+                        {%- else -%}
+                        {{ site.title | escape }}
+                        {%- endif -%}
+                    </li>
+                    {%- if site.email -%}
+                    <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+                    {%- endif -%}
+                </ul>
+            </div>
+    
+            <div class="footer-cell">
+                {%- include social.html -%}
+            </div>
+    
+            <div class="footer-cell">
+                <p>{{- site.colophon | escape -}}</p>
+            </div>
+        </div>
+
+    </div>
+
+</footer>

@@ -1,0 +1,167 @@
+:root {
+    // !default
+    --d-text-color: #fdfdfd;
+    --d-text-color-i: #111;
+    --l-text-color: #111;
+    --l-text-color-i: #fdfdfd;
+
+    // lighten, 18%
+    --d-lighten-text-color: #f8f8f8;
+    --d-lighten-text-color-i: #191919;
+    --l-lighten-text-color: #191919;
+    --l-lighten-text-color-i: #f8f8f8;
+
+    // !default
+    --d-darken-text-color: #fff;
+    --d-darken-text-color-i: #000;
+    --l-darken-text-color: #000;
+    --l-darken-text-color-i: #fff;
+
+    // !default
+    --d-background-color: #171717;
+    --d-background-color-i: #fdfdfd;
+    --l-background-color: #fdfdfd;
+    --l-background-color-i: #171717;
+
+    // !default
+    --d-background-color-lighten: hsl(0, 0%, 13%);
+    --d-background-color-lighten-i: hsl(0, 0%, 95%);
+    --l-background-color-lighten: hsl(0, 0%, 95%);
+    --l-background-color-lighten-i: hsl(0, 0%, 13%);
+
+    // !default
+    --d-background-color-opacity-90: hsla(0, 0%, 9%, 0.90);
+    --d-background-color-opacity-90-i: hsl(0, 0%, 99%, 0.90);
+    --l-background-color-opacity-90: hsl(0, 0%, 99%, 0.90);
+    --l-background-color-opacity-90-i: hsla(0, 0%, 9%, 0.90);
+
+    --d-background-color-opacity-75: hsla(0, 0%, 9%, 0.75);
+    --d-background-color-opacity-75-i: hsl(0, 0%, 99%, 0.75);
+    --l-background-color-opacity-75: hsl(0, 0%, 99%, 0.75);
+    --l-background-color-opacity-75-i: hsla(0, 0%, 9%, 0.75);
+
+    --d-background-color-opacity-60: hsla(0, 0%, 9%, 0.60);
+    --d-background-color-opacity-60-i: hsl(0, 0%, 99%, 0.60);
+    --l-background-color-opacity-60: hsl(0, 0%, 99%, 0.60);
+    --l-background-color-opacity-60-i: hsla(0, 0%, 9%, 0.60);
+
+    --d-background-color-opacity-45: hsla(0, 0%, 9%, 0.45);
+    --d-background-color-opacity-45-i: hsl(0, 0%, 99%, 0.45);
+    --l-background-color-opacity-45: hsl(0, 0%, 99%, 0.45);
+    --l-background-color-opacity-45-i: hsla(0, 0%, 9%, 0.45);
+    
+    --d-background-color-opacity-30: hsla(0, 0%, 9%, 0.30);
+    --d-background-color-opacity-30-i: hsl(0, 0%, 99%, 0.30);
+    --l-background-color-opacity-30: hsl(0, 0%, 99%, 0.30);
+    --l-background-color-opacity-30-i: hsla(0, 0%, 9%, 0.30);
+
+    --d-background-color-opacity-15: hsla(0, 0%, 9%, 0.15);
+    --d-background-color-opacity-15-i: hsl(0, 0%, 99%, 0.15);
+    --l-background-color-opacity-15: hsl(0, 0%, 99%, 0.15);
+    --l-background-color-opacity-15-i: hsla(0, 0%, 9%, 0.15);
+
+    // !default
+    --d-item-background-color: hsl(0, 0%, 16%);
+    --d-item-background-color-i: hsl(0, 0%, 92%);
+    --l-item-background-color: hsl(0, 0%, 92%);
+    --l-item-background-color-i: hsl(0, 0%, 16%);
+
+    // Border Color
+    --d-border-color: hsl(0, 0%, 20%);
+    --l-border-color: hsl(0, 0%, 80%);
+
+    // !default
+    --d-brand-color: #2483ff;
+    --l-brand-color: #16c;
+
+    // !default
+    --d-visited-color: #2483ff;
+    --l-visited-color: #16c;
+
+    --background-radius: .35rem;
+    --border-radius: .35rem;
+
+    --size-unit: 4rem;
+
+    --spacing-unit: 4rem;
+    --half-spacing-unit: calc(var(--spacing-unit) / 2);
+    --quarter-spacing-unit: calc(var(--spacing-unit) / 4);
+
+    --transition-timing-std: 400ms;
+    --transition-function-std: ease-in-out;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: var(--d-text-color);
+        --text-color-i: var(--d-text-color-i);
+        --lighten-text-color: var(--d-lighten-text-color);
+        --lighten-text-color-i: var(--d-lighten-text-color-i);
+        --darken-text-color: var(--d-darken-text-color);
+        --darken-text-color-i: var(--d-darken-text-color-i);
+        --background-color: var(--d-background-color);
+        --background-color-i: var(--d-background-color-i);
+        --background-color-lighten: var(--d-background-color-lighten);
+        --background-color-lighten-i: var(--d-background-color-lighten-i);
+        --background-color-opacity-90: var(--d-background-color-opacity-90);
+        --background-color-opacity-90-i: var(--d-background-color-opacity-90-i);
+        --background-color-opacity-75: var(--d-background-color-opacity-75);
+        --background-color-opacity-75-i: var(--d-background-color-opacity-75-i);
+        --background-color-opacity-60: var(--d-background-color-opacity-60);
+        --background-color-opacity-60-i: var(--d-background-color-opacity-60-i);
+        --background-color-opacity-45: var(--d-background-color-opacity-45);
+        --background-color-opacity-45-i: var(--d-background-color-opacity-45-i);
+        --background-color-opacity-30: var(--d-background-color-opacity-30);
+        --background-color-opacity-30-i: var(--d-background-color-opacity-30-i);
+        --background-color-opacity-15: var(--d-background-color-opacity-15);
+        --background-color-opacity-15-i: var(--d-background-color-opacity-15-i);
+        --item-background-color: var(--d-item-background-color);
+        --item-background-color-i: var(--d-item-background-color-i);
+        --border-color: var(--d-border-color);
+        --brand-color: var(--d-brand-color);
+        --visited-color: var(--d-visited-color);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --text-color: var(--l-text-color);
+        --text-color-i: var(--l-text-color-i);
+        --lighten-text-color: var(--l-lighten-text-color);
+        --lighten-text-color-i: var(--l-lighten-text-color-i);
+        --darken-text-color: var(--l-darken-text-color);
+        --darken-text-color-i: var(--l-darken-text-color-i);
+        --background-color: var(--l-background-color);
+        --background-color-i: var(--l-background-color-i);
+        --background-color-lighten: var(--l-background-color-lighten);
+        --background-color-lighten-i: var(--l-background-color-lighten-i);
+        --background-color-opacity-90: var(--l-background-color-opacity-90);
+        --background-color-opacity-90-i: var(--l-background-color-opacity-90-i);
+        --background-color-opacity-75: var(--l-background-color-opacity-75);
+        --background-color-opacity-75-i: var(--l-background-color-opacity-75-i);
+        --background-color-opacity-60: var(--l-background-color-opacity-60);
+        --background-color-opacity-60-i: var(--l-background-color-opacity-60-i);
+        --background-color-opacity-45: var(--l-background-color-opacity-45);
+        --background-color-opacity-45-i: var(--l-background-color-opacity-45-i);
+        --background-color-opacity-30: var(--l-background-color-opacity-30);
+        --background-color-opacity-30-i: var(--l-background-color-opacity-30-i);
+        --background-color-opacity-15: var(--l-background-color-opacity-15);
+        --background-color-opacity-15-i: var(--l-background-color-opacity-15-i);
+        --item-background-color: var(--l-item-background-color);
+        --item-background-color-i: var(--l-item-background-color-i);
+        --border-color: var(--l-border-color);
+        --brand-color: var(--l-brand-color);
+        --visited-color: var(--l-visited-color);
+    }
+}
+
+
+
+@media (max-width: var(--mobile)) {
+    :root {
+        --spacing-unit: 2rem;
+        --half-spacing-unit: calc(var(--spacing-unit) / 2);
+        --quarter-spacing-unit: calc(var(--spacing-unit) / 4);
+    }
+}
