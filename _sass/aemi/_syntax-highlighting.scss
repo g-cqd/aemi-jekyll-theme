@@ -73,7 +73,7 @@ pre.highlight {
 @media (prefers-color-scheme: dark) {
   pre.highlight {
 
-    .o, .k, .p, .n { color: var(--lighten-text-color-i); }
+    .o, .k, .p, .n, .pi { color: var(--lighten-text-color-i); }
 
     > code * {
         filter: invert(1);
