@@ -111,7 +111,7 @@ video {
     vertical-align: middle;
 }
 
-:not(figure)  {
+:not(figure, a)  {
     > img,
     > video {
         margin-top: var(--half-spacing-unit);
