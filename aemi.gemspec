@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "aemi"
-  spec.version       = "1.0.4"
+  spec.version       = "1.0.7"
   spec.authors       = ["Guillaume C"]
   spec.email         = ["public@gcqd.fr"]
 
@@ -18,10 +18,14 @@ Gem::Specification.new do |spec|
   spec.files         += Dir['assets/index.html']
   spec.files         += Dir['assets/aemi-social-icons.svg']
   spec.files         += Dir['assets/main.scss']
+  spec.files         += Dir['assets/font-files/*.woff2']
+  spec.files         += Dir['assets/font-files/*.woff']
+  spec.files         += Dir['robots.txt']
 
   spec.add_runtime_dependency "jekyll", "~> 4.2"
   spec.add_runtime_dependency "jekyll-feed", "~> 0.12"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8.0"
+  spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4.0"
 
   spec.add_development_dependency "webrick", "~> 2.8.0"
 end
