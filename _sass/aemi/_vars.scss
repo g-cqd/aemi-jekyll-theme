@@ -1,27 +1,27 @@
 :root {
     // !default
-    --d-text-color: #fdfdfd;
-    --d-text-color-i: #111;
-    --l-text-color: #111;
-    --l-text-color-i: #fdfdfd;
+    --d-text-color: hsl( 0%, 0%, 99% );
+    --d-text-color-i: hsl( 0%, 0%, 7% );
+    --l-text-color: hsl( 0%, 0%, 7% );
+    --l-text-color-i: hsl( 0%, 0%, 99% );
 
     // lighten, 18%
-    --d-lighten-text-color: #f8f8f8;
-    --d-lighten-text-color-i: #191919;
-    --l-lighten-text-color: #191919;
-    --l-lighten-text-color-i: #f8f8f8;
+    --d-lighten-text-color: hsl( 0%, 0%, 97% );
+    --d-lighten-text-color-i: hsl( 0%, 0%, 10% );
+    --l-lighten-text-color: hsl( 0%, 0%, 10% );
+    --l-lighten-text-color-i: hsl( 0%, 0%, 97% );
 
     // !default
-    --d-darken-text-color: #fff;
-    --d-darken-text-color-i: #000;
-    --l-darken-text-color: #000;
-    --l-darken-text-color-i: #fff;
+    --d-darken-text-color: hsl( 100%, 100%, 100% );
+    --d-darken-text-color-i: hsl( 0%, 0%, 0% );
+    --l-darken-text-color: hsl( 0%, 0%, 0% );
+    --l-darken-text-color-i: hsl( 100%, 100%, 100% );
 
     // !default
-    --d-background-color: #171717;
-    --d-background-color-i: #fdfdfd;
-    --l-background-color: #fdfdfd;
-    --l-background-color-i: #171717;
+    --d-background-color: hsl( 0%, 0%, 9% );
+    --d-background-color-i: hsl( 0%, 0%, 99% );
+    --l-background-color: hsl( 0%, 0%, 99% );
+    --l-background-color-i: hsl( 0%, 0%, 9% );
 
     // !default
     --d-background-color-lighten: hsl(0, 0%, 13%);
