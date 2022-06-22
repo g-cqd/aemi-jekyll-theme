@@ -20,6 +20,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+exclude:
+  - fonts.txt
+  - /*.gem
+  - /*.gemspec
+  - README.md
+  - LICENSE.txt
+  - scripts/*
+
 defaults:
   -
     scope:

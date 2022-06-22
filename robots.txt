@@ -3,3 +3,5 @@ Disallow: /assets/
 
 User-agent: *
 Allow: /
+
+Sitemap: /sitemap.xml
