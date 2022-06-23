@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "aemi"
-  spec.version       = "1.0.16"
+  spec.version       = "1.0.17"
   spec.authors       = ["Guillaume C"]
   spec.email         = ["public@gcqd.fr"]
 
@@ -10,16 +10,15 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/aemi-dev/aemi-jekyll-theme"
   spec.license       = "MIT"
 
+  spec.files          = Dir['_data/*.yml']
   spec.files          = Dir['_includes/*.html']
-  spec.files         += Dir['_includes/*.svg']
   spec.files         += Dir['_layouts/*.html']
   spec.files         += Dir['_sass/*.scss']
   spec.files         += Dir['_sass/aemi/*.scss']
-  spec.files         += Dir['assets/index.html']
-  spec.files         += Dir['assets/aemi-social-icons.svg']
   spec.files         += Dir['assets/main.scss']
-  spec.files         += Dir['assets/font-files/*.woff2']
-  spec.files         += Dir['assets/font-files/*.woff']
+  spec.files         += Dir['assets/index.html']
+  spec.files         += Dir['assets/images/**/*']
+  spec.files         += Dir['assets/font-files/*.']
   spec.files         += Dir['robots.txt']
 
   spec.add_runtime_dependency "jekyll", "~> 4.2"

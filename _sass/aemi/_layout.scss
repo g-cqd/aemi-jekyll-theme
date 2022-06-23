@@ -91,7 +91,7 @@
 
 .site-title {
     display: block;
-    font-weight: 300;
+    font: var(--head-font-weight) 2rem/1 var(--head-font-family);
     line-height: 1.25;
     margin-bottom: 0;
     float: left;
@@ -110,7 +110,7 @@
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: var(--text-color);
     }
 }
 
@@ -129,7 +129,7 @@
 
     .menu-icon {
         display: none;
-        font-family: $head-font-family;
+        font-family: var(--head-font-family);
         font-weight: 700;
         letter-spacing: .075em;
         margin-right: -.075em;
@@ -138,7 +138,7 @@
 
     .page-link {
         color: var(--text-color);
-        line-height: $base-line-height;
+        line-height: var(--base-line-height);
 
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
@@ -221,7 +221,7 @@
             background-color: var(--background-color);
             border: 2px solid var(--border-color);
             border-radius: calc(var(--border-radius) * 1.5);
-            font-family: $head-font-family;
+            font-family: var(--head-font-family);
             display: block;
             font-weight: 600;
             line-height: 1;
@@ -246,7 +246,7 @@
 
 .site-excerpt {
     font-weight: 400;
-    font-family: $base-font-family;
+    font-family: var(--base-font-family);
     line-height: 1.4;
 }
 
@@ -266,6 +266,11 @@
     margin-bottom: var(--half-spacing-unit);
 
     .footer-heading {
+
+        &,
+        &:visited {
+            color: var(--text-color);
+        }
 
         > img {
             height: 2rem;
@@ -297,6 +302,10 @@
 
 .contact-list,
 .social-media-list {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    gap: calc(var(--quarter-spacing-unit) / 4);
     list-style: none;
     margin-left: 0;
 }
@@ -305,17 +314,6 @@
     > :last-child {
         margin-bottom: var(--spacing-unit);
     }
-}
-
-
-/**
- * Page content
- */
-
-
-.page-content {
-    padding: var(--spacing-unit) 0;
-    flex: 1;
 }
 
 .entry-header {
@@ -338,9 +336,18 @@
         clear: both;
         display: flex;
         flex-flow: column nowrap;
-        gap: var(--quarter-spacing-unit);
+        gap: calc(var(--quarter-spacing-unit) * 1.25);
         justify-content: center;
         z-index: 2;
+
+        > .entry-meta {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .entry-title {
+            padding-bottom: var(--quarter-spacing-unit) ;
+        }
     }
 }
 
@@ -348,7 +355,13 @@
     clear: both;
     display: grid;
     float: none;
-    gap: var(--quarter-spacing-unit);
+    gap: calc(var(--quarter-spacing-unit) * 1.5);
+
+
+    @include media-query($on-palm) {
+        gap: var(--quarter-spacing-unit);
+    }
+
     margin: 0 0 var(--half-spacing-unit) 0;
     padding: 0;
     position: relative;
@@ -426,9 +439,9 @@
 
                     display: flex;
                     flex-flow: column nowrap;
-                    gap: calc(var(--quarter-spacing-unit) / 2);
+                    gap: calc(var(--quarter-spacing-unit) / 1.25);
 
-                    padding: var(--half-spacing-unit);
+                    padding: calc(var(--quarter-spacing-unit) * 1.5);
 
                     &:hover {
                         text-decoration: unset;
@@ -488,6 +501,10 @@
 
                     }
 
+                    >.entry-title {
+                        padding: 0;
+                    }
+
                     h1,
                     h2,
                     h3 {
@@ -508,17 +525,30 @@
     }
 }
 
-.entry-meta {
-    font-size: 1em;
-    color: var(--lighten-text-color);
-}
-
 .entry-title {
     line-height: 1;
     margin-bottom: 0;
-    padding-bottom: var(--quarter-spacing-unit) ;
 }
 
 .entry-content {
     margin-bottom: var(--spacing-unit);
+}
+
+.footnotes {
+    background-color: var(--item-background-color);
+    border-radius: var(--border-radius);
+    padding: var(--quarter-spacing-unit);
+
+    > ol{
+        display: flex;
+        flex-flow: column nowrap;
+        gap: calc(var(--quarter-spacing-unit) * 1.25);
+        padding-left: 0;
+        margin: 0 0 0 var(--quarter-spacing-unit);
+         > li {
+            > p {
+                margin-bottom: var(--quarter-spacing-unit);
+            }
+        }
+    }
 }

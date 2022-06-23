@@ -1,6 +1,7 @@
 ---
 title: Home
-layout: default
+layout: home
+show_title: true
 ---
 
 # Welcome

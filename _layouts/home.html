@@ -2,12 +2,24 @@
 layout: default
 ---
 
-<section class="home contained">
+<section class="entry home contained">
 
     {%- if page.title -%}
 
     <header class="entry-header">
-        <h1 class="page-heading screen-reader-text">{{ page.title }}</h1>
+        {%- if page.show_title != true -%}
+        <h1 class="entry-title screen-reader-text">{{ page.title }}</h1>
+        {%- else -%}
+        <div class="entry-info">
+            <h1 class="entry-title h0">{{ page.title }}</h1>
+            {%- if site.description_tagline -%}
+            <p class="h2">{{ site.description_tagline }}</p>
+            {%- endif -%}
+            {%- if site.description -%}
+            <p class="h3 site-excerpt">{{ site.description }}</p>
+            {%- endif -%}
+        </div>
+        {%- endif -%}
     </header>
 
     {%- endif -%}
@@ -15,6 +27,8 @@ layout: default
     {%- if site.description -%}
 
     <main class="entry-content no-top-margin">
+
+        {%- if page.show_title != true -%}
 
         {%- if site.description_tagline -%}
         <p class="h0">{{ site.description_tagline }}</p>
@@ -24,15 +38,13 @@ layout: default
         <p class="h3 site-excerpt">{{ site.description }}</p>
         {%- endif -%}
 
+        {%- endif -%}
+
     </main>
 
     {%- else if site.content -%}
 
-    <main class="entry-content">
-
-        {{ content }}
-
-    </main>
+    <main class="entry-content">{{ content }}</main>
 
     {%- endif -%}
 
@@ -40,7 +52,7 @@ layout: default
 
     <aside class="entry-feed">
 
-        <h2 class="entry-list-heading screen-reader-text">{{ page.list_title | default: "Posts" }}</h2>
+        <h2 class="entry-list-header{% if page.show_list_title? != true %} screen-reader-text{% endif %}">{{ page.list_title | default: "Posts" }}</h2>
         <ul class="entry-list">
 
             {%- for post in site.posts -%}
@@ -56,13 +68,10 @@ layout: default
                         </div>
                         {% endif %}
 
-                        <a class="entry-info {% if post.thumbnail %}with-thumbnail{% endif %}"
-                            href="{{ post.url | relative_url }}">
+                        <a class="entry-info {% if post.thumbnail %}with-thumbnail{% endif %}" href="{{ post.url | relative_url }}">
                             {%- assign date_format = site.aemi.date_format | default: "%b %-d, %Y" -%}
                             <span class="entry-meta">{{ post.date | date: date_format }}</span>
-                            <h3 class="entry-link">
-                                {{ post.title | escape }}
-                            </h3>
+                            <h3 class="entry-title entry-link">{{ post.title | escape }}</h3>
                         </a>
                     </header>
 
@@ -79,8 +88,6 @@ layout: default
             {%- endfor -%}
 
         </ul>
-
-        <!-- <p class="rss-subscribe">Subscribe <a href="{{ '/feed.xml' | relative_url }}">via RSS</a></p> -->
 
     </aside>
     

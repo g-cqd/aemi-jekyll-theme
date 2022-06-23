@@ -1,4 +1,17 @@
 :root {
+
+    --base-font-family: -apple-system, BlinkMacSystemFont, "Inter var", Inter, Lato, Roboto, system-ui, "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+
+    --head-font-family: -apple-system, BlinkMacSystemFont, "Inter Display var", "Inter Display", "Inter var", Inter, Lato, Roboto, system-ui, "Helvetica Neue", HelveticaNeue,Helvetica, Arial, sans-serif;
+
+    --mono-font-family: "SFMono-Regular", "JetBrains Mono", "Roboto Mono", "Inconsolata", "Menlo", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Consolas", Courier, "Courier New", monospace;
+
+    --base-font-size: 16px;
+    --base-line-height: 1.5;
+
+    --base-font-weight: 400;
+    --head-font-weight: 650;
+
     // !default
     --d-text-color: hsl( 0, 0%, 99% );
     --d-text-color-i: hsl( 0, 0%, 7% );
@@ -28,6 +41,12 @@
     --d-background-color-lighten-i: hsl(0, 0%, 95%);
     --l-background-color-lighten: hsl(0, 0%, 95%);
     --l-background-color-lighten-i: hsl(0, 0%, 13%);
+
+    // !default
+    --d-background-color-light: hsl(0, 0%, 20%);
+    --d-background-color-light-i: hsl(0, 0%, 88%);
+    --l-background-color-light: hsl(0, 0%, 88%);
+    --l-background-color-light-i: hsl(0, 0%, 20%);
 
     // !default
     --d-background-color-opacity-90: hsla(0, 0%, 9%, 0.90);
@@ -68,7 +87,19 @@
 
     // Border Color
     --d-border-color: hsl(0, 0%, 20%);
+    --d-border-color-i: hsl(0, 0%, 80%);
     --l-border-color: hsl(0, 0%, 80%);
+    --l-border-color-i: hsl(0, 0%, 20%);
+
+    --d-border-color-lighten: hsl(0, 0%, 25%);
+    --d-border-color-lighten-i: hsl(0, 0%, 75%);
+    --l-border-color-lighten: hsl(0, 0%, 75%);
+    --l-border-color-lighten-i: hsl(0, 0%, 25%);
+
+    --d-border-color-light: hsl(0, 0%, 30%);
+    --d-border-color-light-i: hsl(0, 0%, 70%);
+    --l-border-color-light: hsl(0, 0%, 70%);
+    --l-border-color-light-i: hsl(0, 0%, 30%);
 
     // !default
     --d-brand-color: #2483ff;
@@ -86,6 +117,7 @@
     --spacing-unit: 4rem;
     --half-spacing-unit: calc(var(--spacing-unit) / 2);
     --quarter-spacing-unit: calc(var(--spacing-unit) / 4);
+    --sub-spacing-unit: calc(var(--quarter-spacing-unit) / 1.5);
 
     --transition-timing-std: 400ms;
     --transition-function-std: ease-in-out;
@@ -104,6 +136,8 @@
         --background-color-i: var(--d-background-color-i);
         --background-color-lighten: var(--d-background-color-lighten);
         --background-color-lighten-i: var(--d-background-color-lighten-i);
+        --background-color-light: var(--d-background-color-light);
+        --background-color-light-i: var(--d-background-color-light-i);
         --background-color-opacity-90: var(--d-background-color-opacity-90);
         --background-color-opacity-90-i: var(--d-background-color-opacity-90-i);
         --background-color-opacity-75: var(--d-background-color-opacity-75);
@@ -119,6 +153,11 @@
         --item-background-color: var(--d-item-background-color);
         --item-background-color-i: var(--d-item-background-color-i);
         --border-color: var(--d-border-color);
+        --border-color-i: var(--d-border-color-i);
+        --border-color-lighten: var(--d-border-color-lighten);
+        --border-color-lighten-i: var(--d-border-color-lighten-i);
+        --border-color-light: var(--d-border-color-light);
+        --border-color-light-i: var(--d-border-color-light-i);
         --brand-color: var(--d-brand-color);
         --visited-color: var(--d-visited-color);
     }
@@ -136,6 +175,8 @@
         --background-color-i: var(--l-background-color-i);
         --background-color-lighten: var(--l-background-color-lighten);
         --background-color-lighten-i: var(--l-background-color-lighten-i);
+        --background-color-light: var(--l-background-color-light);
+        --background-color-light-i: var(--l-background-color-light-i);
         --background-color-opacity-90: var(--l-background-color-opacity-90);
         --background-color-opacity-90-i: var(--l-background-color-opacity-90-i);
         --background-color-opacity-75: var(--l-background-color-opacity-75);
@@ -151,6 +192,11 @@
         --item-background-color: var(--l-item-background-color);
         --item-background-color-i: var(--l-item-background-color-i);
         --border-color: var(--l-border-color);
+        --border-color-i: var(--l-border-color-i);
+        --border-color-lighten: var(--l-border-color-lighten);
+        --border-color-lighten-i: var(--l-border-color-lighten-i);
+        --border-color-light: var(--l-border-color-light);
+        --border-color-light-i: var(--l-border-color-light-i);
         --brand-color: var(--l-brand-color);
         --visited-color: var(--l-visited-color);
     }

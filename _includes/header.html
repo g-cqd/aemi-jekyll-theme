@@ -4,11 +4,11 @@
       {%- assign default_paths = site.pages | map: "path" -%}
       {%- assign page_paths = site.header_pages | default: default_paths -%}
         <a class="site-title" rel="author" href="{{ '/' | relative_url }}">
-            {% if site.logo %}
+            {%- if site.logo -%}
                 <img src="{{ '/assets/images/logo/' | append: site.logo | relative_url }}" alt="{{ site.title | escape }}" height="2rem">
-            {% else %}
+            {%- else -%}
                 {{ site.title | escape }}
-            {% endif %}
+            {%- endif -%}
         </a>
   
       {%- if page_paths -%}

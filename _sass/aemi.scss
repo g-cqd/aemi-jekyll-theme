@@ -1,32 +1,5 @@
 @charset "utf-8";
 
-// Define defaults for each variable.
-
-$base-font-family: -apple-system, BlinkMacSystemFont, "Inter var", Inter, Lato, Roboto, system-ui, "Helvetica Neue", HelveticaNeue,
-Helvetica, Arial, sans-serif !default;
-
-$head-font-family: -apple-system, BlinkMacSystemFont, "Inter Display var", "Inter Display", "Inter var", Inter, Lato, Roboto, system-ui, "Helvetica Neue", HelveticaNeue,
-Helvetica, Arial, sans-serif !default;
-
-$mono-font-family: "SFMono-Regular", "JetBrains Mono", "Roboto Mono", "Inconsolata", "Menlo", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Consolas", Courier, "Courier New", monospace !default;
-
-$base-font-size: 16px !default;
-
-$base-font-weight: 400 !default;
-$heading-font-weight: 650 !default;
-
-$small-font-size: $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
-
-$spacing-unit: 4rem !default;
-
-$grey-color: #828282 !default;
-
-$grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark: darken($grey-color, 25%) !default;
-
-$table-text-align: left !default;
-
 // Width of the content area
 $content-width: 800px !default;
 
@@ -36,8 +9,8 @@ $on-laptop: 600px !default;
 // Use media queries like this:
 // @include media-query($on-palm) {
 //   .wrapper {
-//     padding-right: $spacing-unit / 2;
-//     padding-left: $spacing-unit / 2;
+//     padding-right: calc(var(--spacing-unit) / 20;
+//     padding-left: calc(var(--spacing-unit) / 20;
 //   }
 // }
 

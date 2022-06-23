@@ -1,6 +1,6 @@
-title: 
-author: 
-email: 
+title: Aemi Theme Website
+author: "Guillaume"
+email: public@gcqd.fr
 logo: 
 colophon: 
 description_tagline: 
@@ -8,10 +8,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Lorem ipsum dolor sit amet
   consectatur
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: 
-github_username:  
-rss: RSS
+url: "" # the base hostname & protocol for your site, e.g. http://example.com 
 
 # Build settings
 theme: aemi

@@ -620,7 +620,7 @@
 
 :root {
 
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    font: var(--base-font-weight) var(--base-font-size)/var(--base-line-height) var(--base-font-family);
 
     // Font Kerning
     -webkit-font-feature-settings: "kern" 1;

@@ -17,6 +17,7 @@ pre.highlight {
   .cp    { color: #999; font-weight: bold } // Comment.Preproc
   .c1    { color: #998; font-style: italic } // Comment.Single
   .cs    { color: #999; font-weight: bold; font-style: italic } // Comment.Special
+  .dl    { color: #d14 } // Literal.String.Quote
   .gd    { color: #000; background-color: #fdd } // Generic.Deleted
   .gd .x { color: #000; background-color: #faa } // Generic.Deleted.Specific
   .ge    { font-style: italic } // Generic.Emph
@@ -73,7 +74,7 @@ pre.highlight {
 @media (prefers-color-scheme: dark) {
   pre.highlight {
 
-    .o, .k, .p, .n, .pi, .kc { color: var(--lighten-text-color-i); }
+    .o, .k, .p, .n, .pi, .kc, .kd, .nx { color: var(--lighten-text-color-i); }
 
     > code * {
         filter: invert(1);

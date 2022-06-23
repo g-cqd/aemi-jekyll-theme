@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article class="entry contained" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="entry post contained" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header class="entry-header">
 
@@ -15,19 +15,19 @@ layout: default
         <div class="entry-info {% if post.thumbnail %}with-thumbnail{% endif %}">
             {%- assign date_format = site.aemi.date_format | default: "%b %-d, %Y" -%}
             <div class="entry-meta">
-                <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                <time class="entry-date-published dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                   {%- assign date_format = site.aemi.date_format | default: "%b %-d, %Y" -%}
                   {{ page.date | date: date_format }}
                 </time>
                 {%- if page.author -%}
-                  —&#20;<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+                &#x20;—&#x20;<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="entry-author" itemprop="name">{{ page.author }}</span></span>
                 {%- else if page.authors -%}
-                    —&#20;
+                &#x20;—&#x20;
                     {%- for author in page.authors -%}
                         {%- if forloop.index != 1 -%}
-                            , <span itemprop="co-author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+                            ,&#x20;<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="entry-author" itemprop="name">{{ author }}</span></span>
                         {%- else -%}
-                            <span itemprop="co-author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+                            <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="entry-author" itemprop="name">{{ author }}</span></span>
                         {%- endif -%}
                     {%- endfor -%}
                 {%- endif -%}
@@ -37,11 +37,6 @@ layout: default
 
     </header>
 
-    <main class="entry-content" itemprop="articleBody">
-        {{ content }}
-    </main>
-    
-    <footer>
-    </footer>
+    <main class="entry-content" itemprop="articleBody">{{ content }}</main>
 
 </article>

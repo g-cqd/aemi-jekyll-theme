@@ -1,14 +1,50 @@
+{%- assign use_social = 0 -%}
+
+{%- for network in site.data.social.networks -%}
+    {%- if network.username != nil or network.use -%}
+        {%- assign use_social = true -%}
+    {%- endif -%}
+{%- endfor -%}
+
+{%- if use_social == true -%}
 <ul class="social-media-list">
-  {%- if site.dribbble_username -%}<li><a href="https://dribbble.com/{{ site.dribbble_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/aemi-social-icons.svg#dribbble' | relative_url }}"></use></svg> <span class="username">{{ site.dribbble_username| escape }}</span></a></li>{%- endif -%}
-  {%- if site.facebook_username -%}<li><a href="https://www.facebook.com/{{ site.facebook_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/aemi-social-icons.svg#facebook' | relative_url }}"></use></svg> <span class="username">{{ site.facebook_username| escape }}</span></a></li>{%- endif -%}
-  {%- if site.flickr_username -%}<li><a href="https://www.flickr.com/photos/{{ site.flickr_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/aemi-social-icons.svg#flickr' | relative_url }}"></use></svg> <span class="username">{{ site.flickr_username| escape }}</span></a></li>{%- endif -%}
-  {%- if site.github_username -%}<li><a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/aemi-social-icons.svg#github' | relative_url }}"></use></svg> <span class="username">{{ site.github_username| escape }}</span></a></li>{%- endif -%}
-  {%- if site.instagram_username -%}<li><a href="https://instagram.com/{{ site.instagram_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/aemi-social-icons.svg#instagram' | relative_url }}"></use></svg> <span class="username">{{ site.instagram_username| escape }}</span></a></li>{%- endif -%}
-  {%- if site.linkedin_username -%}<li><a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/aemi-social-icons.svg#linkedin' | relative_url }}"></use></svg> <span class="username">{{ site.linkedin_username| escape }}</span></a></li>{%- endif -%}
-  {%- if site.pinterest_username -%}<li><a href="https://www.pinterest.com/{{ site.pinterest_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/aemi-social-icons.svg#pinterest' | relative_url }}"></use></svg> <span class="username">{{ site.pinterest_username| escape }}</span></a></li>{%- endif -%}
-  {%- for mst in site.mastodon -%}{%- if mst.username and mst.instance -%}<li><a href="https://{{ mst.instance| cgi_escape | escape}}/@{{mst.username}}"><svg class="svg-icon"><use xlink:href="{{ '/assets/aemi-social-icons.svg#mastodon' | relative_url }}"></use></svg> <span class="username">{{ mst.username|escape }}</span></a></li>{%- endif -%}{%- endfor -%}
-  {%- if site.twitter_username -%}<li><a href="https://www.twitter.com/{{ site.twitter_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/aemi-social-icons.svg#twitter' | relative_url }}"></use></svg> <span class="username">{{ site.twitter_username| escape }}</span></a></li>{%- endif -%}
-  {%- if site.youtube_username -%}<li><a href="https://youtube.com/{{ site.youtube_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/aemi-social-icons.svg#youtube' | relative_url }}"></use></svg> <span class="username">{{ site.youtube_username| escape }}</span></a></li>{%- endif -%}
-  {%- if site.googleplus_username -%}<li><a href="https://plus.google.com/{{ site.googleplus_username| escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/aemi-social-icons.svg#googleplus' | relative_url }}"></use></svg> <span class="username">{{ site.googleplus_username| escape }}</span></a></li>{%- endif -%}
-  {%- if site.rss -%}<li><a href="{{ 'feed.xml' | relative_url }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/aemi-social-icons.svg#rss' | relative_url }}"></use></svg> <span>{{ site.rss | escape }}</span></a></li>{%- endif -%}
+{%- for network in site.data.social.networks -%}
+    {%- assign network_name = network.name | downcase -%}
+    {%- if network.username != nil -%}
+    {%- assign network_cgi_usr = network.username | cgi_escape | escape -%}
+    {%- assign network_usr = network.username | escape -%}
+    {%- case network_name -%}
+        {%- when "pinterest" -%}
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://www.pinterest.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-pinterest"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        {%- when "linkedin" -%}
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://www.linkedin.com/in/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-linkedin"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        {%- when "instagram" -%}
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://instagram.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-instagram"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        {%- when "flickr" -%}
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://www.flickr.com/photos/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-flickr"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        {%- when "facebook" -%}
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://www.facebook.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-facebook"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        {%- when "github" -%}
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://github.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-github"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        {%- when "twitter" -%}
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://www.twitter.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-twitter"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        {%- when "dribble" -%}
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://dribbble.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-dribble"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        {%- when "youtube" -%}
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://youtube.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-youtube"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+    {%- endcase -%}
+    {%- else if network.use -%}
+        {%- case network_name -%}
+            {%- when "rss" -%}
+            <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="{{ 'feed.xml' | relative_url }}"><svg class="svg-icon"><use xlink:href="#svg-rss"></use></svg> <span class="text">{{ network.text | escape }}</span></a></li>
+            {%- when "mastodon" -%}
+            {%- for mst in network.mastodon -%}
+                {%- if mst.username and mst.instance -%}
+                <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://{{ mst.instance| cgi_escape | escape }}/@{{ mst.username }}"><svg class="svg-icon"><use xlink:href="#svg-mastodon"></use></svg> <span class="username">{{ mst.username | escape }}</span></a></li>
+                {%- endif -%}
+            {%- endfor -%}
+        {%- endcase -%}
+    {%- endif -%}
+{%- endfor -%}
 </ul>
+{%- endif -%}

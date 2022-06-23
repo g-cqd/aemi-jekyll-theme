@@ -1,5 +1,18 @@
 @import "fonts", "vars";
 
+.hidden {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    display: none;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -9999;
+    bottom: 0;
+    right: 0;
+}
+
 
 .screen-reader-text {
     clip-path: polygon(0 0, 1px 0, 1px 1px, 0 1px);
@@ -59,6 +72,17 @@ body {
     overflow-x: hidden;
 }
 
+hr {
+    background-color: var(--border-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-sizing: content-box;
+    clear: both;
+    height: 0;
+    margin: calc(var(--half-spacing-unit) * 1.5) auto;
+    overflow: visible;
+  }
+
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -89,7 +113,6 @@ figure,
 }
 
 
-
 /**
  * `main` element
  */
@@ -106,6 +129,7 @@ main {
  */
 img,
 video {
+    border-radius: var(--border-radius);
     display: block;
     max-width: 100%;
     vertical-align: middle;
@@ -131,7 +155,7 @@ figure {
 }
 
 figcaption {
-    font-size: $small-font-size;
+    font-size: .875rem;
 }
 
 
@@ -171,8 +195,8 @@ h5,
 h6,
 .h6,
 .h7 {
-    font-family: $head-font-family;
-    font-weight: $heading-font-weight;
+    font-family: var(--head-font-family);
+    font-weight: var(--head-font-weight);
 
     &:only-child {
         margin-bottom: 0;
@@ -252,7 +276,7 @@ a {
     .social-media-list &:hover {
         text-decoration: none;
 
-        .username {
+        .username, .text {
             text-decoration: underline;
         }
     }
@@ -315,7 +339,7 @@ var,
 kbd,
 samp {
     font-size: 0.9em;
-    font-family: $mono-font-family;
+    font-family: var(--mono-font-family);
     -webkit-hyphens: none;
     -moz-hyphens: none;
     hyphens: none;
@@ -422,40 +446,35 @@ template {
     vertical-align: text-top;
 }
 
-.social-media-list {
-    li+li {
-        padding-top: 5px;
-    }
-}
-
 
 
 /**
  * Tables
  */
 table {
-    margin-bottom: $spacing-unit;
+    margin-bottom: var(--spacing-unit);
     width: 100%;
-    text-align: $table-text-align;
+    text-align: left;
     color: var(--lighten-text-color);
     border-collapse: collapse;
     border: 1px solid var(--border-color);
+    overflow-x: auto;
 
     tr {
         &:nth-child(even) {
-            background-color: lighten($grey-color-light, 6%);
+            background-color: var(--background-color-lighten);
         }
     }
 
     th,
     td {
-        padding: ($spacing-unit / 3) ($spacing-unit / 2);
+        padding: calc(var(--half-spacing-unit) / 3) calc(var(--half-spacing-unit) / 2);
     }
 
     th {
-        background-color: lighten($grey-color-light, 3%);
+        background-color: var(--background-color-light);
         border: 1px solid var(--border-color);
-        border-bottom-color: darken($grey-color-light, 12%);
+        border-bottom-color: var(--border-color-light);
     }
 
     td {
