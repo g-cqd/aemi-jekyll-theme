@@ -97,8 +97,9 @@
     float: left;
     z-index: 1000;
 
-    >img {
+    > img {
         height: 2rem;
+        border-radius: 0;
 
         @media (prefers-color-scheme: dark) {
             & {
@@ -274,6 +275,7 @@
 
         > img {
             height: 2rem;
+            border-radius: 0;
             @media (prefers-color-scheme: dark) {
                 & {
                     filter: invert(100%);

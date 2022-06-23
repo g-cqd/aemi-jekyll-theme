@@ -15,32 +15,32 @@
     {%- assign network_usr = network.username | escape -%}
     {%- case network_name -%}
         {%- when "pinterest" -%}
-        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://www.pinterest.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-pinterest"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a target="_blank" href="https://www.pinterest.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-pinterest"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
         {%- when "linkedin" -%}
-        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://www.linkedin.com/in/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-linkedin"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a target="_blank" href="https://www.linkedin.com/in/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-linkedin"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
         {%- when "instagram" -%}
-        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://instagram.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-instagram"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a target="_blank" href="https://instagram.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-instagram"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
         {%- when "flickr" -%}
-        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://www.flickr.com/photos/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-flickr"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a target="_blank" href="https://www.flickr.com/photos/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-flickr"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
         {%- when "facebook" -%}
-        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://www.facebook.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-facebook"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a target="_blank" href="https://www.facebook.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-facebook"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
         {%- when "github" -%}
-        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://github.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-github"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a target="_blank" href="https://github.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-github"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
         {%- when "twitter" -%}
-        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://www.twitter.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-twitter"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a target="_blank" href="https://www.twitter.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-twitter"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
         {%- when "dribble" -%}
-        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://dribbble.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-dribble"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a target="_blank" href="https://dribbble.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-dribble"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
         {%- when "youtube" -%}
-        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://youtube.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-youtube"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a target="_blank" href="https://youtube.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-youtube"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
     {%- endcase -%}
     {%- else if network.use -%}
         {%- case network_name -%}
             {%- when "rss" -%}
-            <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="{{ 'feed.xml' | relative_url }}"><svg class="svg-icon"><use xlink:href="#svg-rss"></use></svg> <span class="text">{{ network.text | escape }}</span></a></li>
+            <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a target="_blank" href="{{ 'feed.xml' | relative_url }}"><svg class="svg-icon"><use xlink:href="#svg-rss"></use></svg> <span class="text">{{ network.text | escape }}</span></a></li>
             {%- when "mastodon" -%}
             {%- for mst in network.mastodon -%}
                 {%- if mst.username and mst.instance -%}
-                <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a href="https://{{ mst.instance| cgi_escape | escape }}/@{{ mst.username }}"><svg class="svg-icon"><use xlink:href="#svg-mastodon"></use></svg> <span class="username">{{ mst.username | escape }}</span></a></li>
+                <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a target="_blank" href="https://{{ mst.instance| cgi_escape | escape }}/@{{ mst.username }}"><svg class="svg-icon"><use xlink:href="#svg-mastodon"></use></svg> <span class="username">{{ mst.username | escape }}</span></a></li>
                 {%- endif -%}
             {%- endfor -%}
         {%- endcase -%}
