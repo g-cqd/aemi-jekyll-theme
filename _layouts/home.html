@@ -63,9 +63,7 @@ layout: default
                     <header class="entry-header">
 
                         {% if post.thumbnail %}
-                        <div class="entry-thumbnail"
-                            style="background-image:url(/assets/images/thumbnails{{ post.thumbnail | relative_url }}.svg)">
-                        </div>
+                        <div class="entry-thumbnail" style="background-image:url(/assets/images/thumbnails/{{ post.thumbnail | relative_url }})"></div>
                         {% endif %}
 
                         <a class="entry-info {% if post.thumbnail %}with-thumbnail{% endif %}" href="{{ post.url | relative_url }}">

@@ -1,16 +1,21 @@
+# Site Identity
 title: Aemi Theme Website
+tagline: 
+logo: /assets/images/logo/favicon.svg
+description: >-
+  Lorem ipsum dolor sit amet consectatur
+description_tagline: 
+
+# Owner Identity
 author: "Guillaume"
 email: public@gcqd.fr
-logo: 
 colophon: 
-description_tagline: 
-description: >- # this means to ignore newlines until "baseurl:"
-  Lorem ipsum dolor sit amet
-  consectatur
+
+# Technical Details
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com 
 
-# Build settings
+# Build Settings & Plugins
 theme: aemi
 plugins:
   - jekyll-feed
@@ -25,6 +30,8 @@ exclude:
   - LICENSE.txt
   - scripts/*
 
+# Defaults Configuration
+#   - Sitemap
 defaults:
   -
     scope:

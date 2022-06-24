@@ -6,8 +6,7 @@
             <a class="footer-heading" rel="author" href="{{ '/' | relative_url }}">
                 {%- if site.logo -%}
                 <strong class="screen-reader-text">{{ site.title | escape }}</strong>
-                <img src="{{ '/assets/images/logo/' | append: site.logo | relative_url }}"
-                    alt="{{ site.title | escape }}" height="2rem">
+                <img src="{{ site.logo | relative_url }}" alt="{{ site.title | escape }}" height="2rem">
                 {%- else -%}
                 <strong class="h2">{{ site.title | escape }}</strong>
                 {%- endif -%}
