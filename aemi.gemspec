@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "aemi"
-  spec.version       = "1.0.18"
+  spec.version       = "1.0.19"
   spec.authors       = ["Guillaume C"]
   spec.email         = ["public@gcqd.fr"]
 
@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files          = Dir['_data/*.yml']
-  spec.files          = Dir['_includes/*.html']
+  spec.files         += Dir['_includes/*.html']
   spec.files         += Dir['_layouts/*.html']
   spec.files         += Dir['_sass/*.scss']
   spec.files         += Dir['_sass/aemi/*.scss']
@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "jekyll", "~> 4.2"
   spec.add_runtime_dependency "jekyll-feed", "~> 0.12"
-  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8.0"
+  spec.add_runtime_dependency "aemi-seo-tag", "~> 0"
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4.0"
 
   spec.add_development_dependency "webrick", "~> 2.8.0"

@@ -14,7 +14,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 theme: aemi
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
+  - aemi-seo-tag
   - jekyll-sitemap
 
 exclude:
