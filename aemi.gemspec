@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "aemi"
-  spec.version       = "1.0.20"
+  spec.version       = "1.1.0"
   spec.authors       = ["Guillaume C"]
   spec.email         = ["public@gcqd.fr"]
 
@@ -18,7 +18,8 @@ Gem::Specification.new do |spec|
   spec.files         += Dir['assets/main.scss']
   spec.files         += Dir['assets/index.html']
   spec.files         += Dir['assets/images/**/*']
-  spec.files         += Dir['assets/font-files/*.']
+  spec.files         += Dir['assets/font-files/*.woff']
+  spec.files         += Dir['assets/font-files/*.woff2']
   spec.files         += Dir['robots.txt']
 
   spec.add_runtime_dependency "jekyll", "~> 4.2"
