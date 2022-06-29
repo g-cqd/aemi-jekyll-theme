@@ -135,7 +135,7 @@ video {
     vertical-align: middle;
 }
 
-:not(figure, a)  {
+:not(figure, figure>picture, a) {
     > img,
     > video {
         margin-top: var(--half-spacing-unit);
@@ -148,14 +148,25 @@ video {
  * Figures
  */
 figure {
+
+    background-color: var(--background-color-lighten);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--quarter-spacing-unit);
+
     > img,
     > video {
+        border-radius: calc(var(--border-radius) / 2);
         display: block;
     }
 }
 
 figcaption {
+    display: block;
     font-size: .875rem;
+    font-style: italic;
+    margin-top: var(--quarter-spacing-unit);
+    text-align: center;
 }
 
 

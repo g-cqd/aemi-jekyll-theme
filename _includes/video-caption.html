@@ -1,0 +1,27 @@
+<figure class="video with-caption">
+    <video {% if include.autoplay == true %}autoplay{% endif %}
+        {% if include.loop == true %}loop{% endif %}
+        {% if include.muted == true %}muted{% endif %}
+        {% if include.controls == true %}controls{% endif %}
+        {% if include.alt != nil %}alt="{{ include.alt | escape }}"{% endif %}
+        width="100%">
+        {% for format in site.data.mime.types.video %}
+        {% if include.portrait == true %}
+        <source src="{{ include.name }}.full.{{ format.ext }}" type="video/{{ format.type }}" media="all and (min-height: 2560px)">
+        {% for size in site.data.sizes.portrait %}
+        <source src="{{ include.name }}.{{ size.height }}p.{{ format.ext }}" type="video/{{ format.type }}" media="all and (min-height: {{ size.height }}px)">
+        {% endfor %}
+        {% else %}
+        <source src="{{ include.name }}.full.{{ format.ext }}" type="video/{{ format.type }}" media="all and (min-width: 2560px)">
+        {% for size in site.data.sizes.landscape %}
+        <source src="{{ include.name }}.{{ size.height }}p.{{ format.ext }}" type="video/{{ format.type }}" media="all and (min-width: {{ size.width }}px)">
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+    </video>
+    {% if include.caption != nil %}
+    <figcaption>{{ include.caption | escape }}</figcaption>
+    {% else if include.alt != nil %}
+    <figcaption>{{ include.alt | escape }}</figcaption>
+    {% endif %}
+</figure>

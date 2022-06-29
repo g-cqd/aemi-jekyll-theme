@@ -2,7 +2,7 @@
 layout: post
 title:  "One morning, when Gregor Samsa woke from troubled dreams"
 date:   2018-11-29 10:10:10 +0200
-thumbnail: thumbnail
+thumbnail: thumbnail.svg
 description: "One morning, when Gregor Samsa woke from troubled dreams."
 author: "The Author"
 ---

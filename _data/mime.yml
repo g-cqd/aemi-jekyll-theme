@@ -1,0 +1,28 @@
+types:
+  images:
+    -
+      ext: avif
+      type: avif
+    -
+      ext: webp
+      type: webp
+    -
+      ext: jpg
+      type: jpeg
+    -
+      ext: png
+      type: png
+  video:
+    -
+      ext: avif.webm
+      type: av1
+    -
+      ext: mov
+      type: H265
+    -
+      ext: webm
+      type: webm
+    -
+      ext: mp4
+      type: mp4
+

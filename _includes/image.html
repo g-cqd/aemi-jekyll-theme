@@ -1,0 +1,11 @@
+<figure class="image no-caption">
+    <picture>
+        {% for format in site.data.mime.types.images %}
+        <source srcset="{{ include.name | relative_url }}.{{ format.ext }}" type="image/{{ format.type }}">
+        {% endfor %}
+        <img src="{{ include.name | relative_url }}.png" {% if include.alt != nil %}alt="{{ include.alt | escape }}"{% endif %} loading="lazy">
+    </picture>
+    {% if include.alt != nil %}
+    <figcaption class="screen-reader-text">{{ include.alt | escape }}</figcaption>
+    {% endif %}
+</figure>

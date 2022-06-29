@@ -1,0 +1,38 @@
+landscape:
+  -
+    width: 1920
+    height: 1080
+  -
+    width: 1280
+    height: 720
+  -
+    width: 853
+    height: 480
+  -
+    width: 640
+    height: 480
+  -
+    width: 427
+    height: 240
+  -
+    width: 256
+    height: 144
+portrait:
+  -
+    width: 1080
+    height: 1920
+  -
+    width: 720
+    height: 1280
+  -
+    width: 480
+    height: 853
+  -
+    width: 360
+    height: 640
+  -
+    width: 240
+    height: 427
+  -
+    width: 144
+    height: 256
