@@ -618,9 +618,33 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "JetBrains Mono Var";
+    font-weight: 100 900;
+    font-style: normal;
+    font-named-instance: "Regular";
+    font-display: swap;
+    src: url("/assets/font-files/JetBrainsMono[wght].woff2") format("woff2"),
+        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/variable/JetBrainsMono[wght].woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "JetBrains Mono Var";
+    font-weight: 100 900;
+    font-style: italic;
+    font-named-instance: "Italic";
+    font-display: swap;
+    src: url("/assets/font-files/JetBrainsMono-Italic[wght].woff2") format("woff2"),
+    url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/variable/JetBrainsMono-Italic[wght].woff2") format("woff2");
+}
+
 :root {
 
-    font: var(--base-font-weight) var(--base-font-size)/var(--base-line-height) var(--base-font-family);
+    font-weight: var(--base-font-weight);
+    font-feature-settings: "wght" var(--base-font-weight);
+    font-size: var(--base-font-size);
+    font-family: var(--base-font-family);
+    line-height: var(--base-line-height);
 
     // Font Kerning
     -webkit-font-feature-settings: "kern" 1;

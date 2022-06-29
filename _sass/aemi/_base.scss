@@ -208,6 +208,7 @@ h6,
 .h7 {
     font-family: var(--head-font-family);
     font-weight: var(--head-font-weight);
+    font-feature-settings: "wght" var(--head-font-weight);
 
     &:only-child {
         margin-bottom: 0;
@@ -293,11 +294,18 @@ a {
     }
 }
 
+abbr,
+abbr[title],
+acronym {
+  border-bottom: 2px dotted currentColor;
+  text-decoration: none;
+}
+
 /**
  * Paragraphs
  */
 p {
-    text-align: justify;
+    text-align: left;
     text-align-last: left;
 }
 
@@ -329,7 +337,7 @@ blockquote {
     border-left: 4px solid var(--border-color);
     padding-left: var(--half-spacing-unit);
     font-style: italic;
-    text-align: justify;
+    text-align: left;
     text-align-last: left;
 
     > :last-child {
@@ -337,6 +345,19 @@ blockquote {
     }
 }
 
+
+dfn {
+    border-bottom: 2px solid currentColor;
+  }
+  
+  dt {
+    font-weight: bold;
+    padding-left: 0em;
+  }
+  
+  dd {
+    margin-bottom: 1em;
+  }
 
 
 /**
@@ -369,6 +390,8 @@ code {
 }
 
 :not(pre)>code {
+    border-radius: calc(var(--border-radius) * 0.75 );
+    line-height: 1;
     white-space: normal;
     word-break: break-all;
 }
@@ -407,6 +430,17 @@ sup {
 template {
   display: none;
 }
+
+progress {
+    vertical-align: baseline;
+  }
+  
+  iframe {
+    border: 0;
+    max-width: 100%;
+    padding: 0;
+    resize: none;
+  }
 
 
 /**
