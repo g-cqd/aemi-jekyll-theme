@@ -1,44 +1,44 @@
 <footer class="site-footer" aria-label="footer" role="contentinfo">
 
-    <div class="contained">
+<div class="contained">
 
-        <div class="footer-header">
-            <a class="footer-title brand" rel="author" href="{{ '/' | relative_url }}">
-                {%- if site.logo -%}
-                <strong class="screen-reader-text">{{ site.title | escape }}</strong>
-                <img src="{{ site.logo | relative_url }}" alt="{{ site.title | escape }}" height="2rem">
-                {%- else -%}
-                <strong class="h2">{{ site.title | escape }}</strong>
-                {%- endif -%}
-            </a>
-        </div>
+<div class="footer-header">
+<a class="footer-title brand" rel="author" href="{{ '/' | relative_url }}">
+{%- if site.logo -%}
+<strong class="screen-reader-text">{{ site.title | escape }}</strong>
+<img src="{{ site.logo | relative_url }}" alt="{{ site.title | escape }}" height="2rem">
+{%- else -%}
+<strong class="h2">{{ site.title | escape }}</strong>
+{%- endif -%}
+</a>
+</div>
 
-        <div class="footer-content">
-            <div class="footer-cell">
-                <ul class="contact-list">
-                    <li class="p-name">
-                        {%- if site.author -%}
-                        {{ site.author | escape }}
-                        {%- else -%}
-                        {{ site.title | escape }}
-                        {%- endif -%}
-                    </li>
-                    {%- if site.email -%}
-                    <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-                    {%- endif -%}
-                </ul>
-            </div>
+<div class="footer-content">
+<div class="footer-cell">
+<ul class="contact-list">
+<li class="p-name">
+{%- if site.author -%}
+{{ site.author | escape }}
+{%- else -%}
+{{ site.title | escape }}
+{%- endif -%}
+</li>
+{%- if site.email -%}
+<li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+{%- endif -%}
+</ul>
+</div>
 
-            <div class="footer-cell">
-                {%- include social.html -%}
-            </div>
+<div class="footer-cell">
+{%- include social.html -%}
+</div>
 
-            <div class="footer-cell">
-                <p>{{- site.colophon | escape -}}</p>
-            </div>
-        </div>
+<div class="footer-cell">
+<p>{{- site.colophon | escape -}}</p>
+</div>
+</div>
 
-    </div>
+</div>
 
 </footer>
 
@@ -52,10 +52,10 @@
 
 {%- if use_social -%}
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
-    {%- for network in site.data.social.networks -%}
-    {%- if network.username != nil or network.use -%}
-    {{ network.icon | raw }}
-    {%- endif -%}
-    {%- endfor -%}
+{%- for network in site.data.social.networks -%}
+{%- if network.username != nil or network.use -%}
+{{ network.icon | raw }}
+{%- endif -%}
+{%- endfor -%}
 </svg>
 {%- endif -%}
