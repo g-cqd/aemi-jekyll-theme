@@ -4,39 +4,39 @@ layout: default
 
 <article class="entry post contained" itemscope itemtype="http://schema.org/BlogPosting">
 
-<header class="entry-header">
+    <header class="entry-header">
 
-{% if page.thumbnail %}
-<div class="entry-thumbnail">
-<img src="/assets/images/thumbnails/{{ page.thumbnail | relative_url }}" alt="{{ page.title }}" />
-</div>
-{% endif %}
+        {% if page.thumbnail %}
+        <div class="entry-thumbnail">
+            <img src="/assets/images/thumbnails/{{ page.thumbnail | relative_url }}" alt="{{ page.title }}" />
+        </div>
+        {% endif %}
+        
+        <div class="entry-info {% if post.thumbnail %}with-thumbnail{% endif %}">
+            {%- assign date_format = site.aemi.date_format | default: "%b %-d, %Y" -%}
+            <div class="entry-meta">
+                <time class="entry-date-published dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                  {%- assign date_format = site.aemi.date_format | default: "%b %-d, %Y" -%}
+                  {{ page.date | date: date_format }}
+                </time>
+                {%- if page.author -%}
+                &#x20;—&#x20;<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="entry-author" itemprop="name">{{ page.author }}</span></span>
+                {%- else if page.authors -%}
+                &#x20;—&#x20;
+                    {%- for author in page.authors -%}
+                        {%- if forloop.index != 1 -%}
+                            ,&#x20;<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="entry-author" itemprop="name">{{ author }}</span></span>
+                        {%- else -%}
+                            <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="entry-author" itemprop="name">{{ author }}</span></span>
+                        {%- endif -%}
+                    {%- endfor -%}
+                {%- endif -%}
+            </div>
+            <h1 class="entry-title" itemprop="name headline">{{ page.title | escape }}</h1>
+        </div>
 
-<div class="entry-info {% if post.thumbnail %}with-thumbnail{% endif %}">
-{%- assign date_format = site.aemi.date_format | default: "%b %-d, %Y" -%}
-<div class="entry-meta">
-<time class="entry-date-published dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-{%- assign date_format = site.aemi.date_format | default: "%b %-d, %Y" -%}
-{{ page.date | date: date_format }}
-</time>
-{%- if page.author -%}
-&#x20;—&#x20;<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="entry-author" itemprop="name">{{ page.author }}</span></span>
-{%- else if page.authors -%}
-&#x20;—&#x20;
-{%- for author in page.authors -%}
-{%- if forloop.index != 1 -%}
-,&#x20;<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="entry-author" itemprop="name">{{ author }}</span></span>
-{%- else -%}
-<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="entry-author" itemprop="name">{{ author }}</span></span>
-{%- endif -%}
-{%- endfor -%}
-{%- endif -%}
-</div>
-<h1 class="entry-title" itemprop="name headline">{{ page.title | escape }}</h1>
-</div>
+    </header>
 
-</header>
-
-<main class="entry-content" itemprop="articleBody">{{ content }}</main>
+    <main class="entry-content" itemprop="articleBody">{{ content }}</main>
 
 </article>

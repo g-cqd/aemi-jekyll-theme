@@ -4,93 +4,93 @@ layout: default
 
 <section class="entry home contained">
 
-{%- if page.title -%}
+    {%- if page.title -%}
 
-<header class="entry-header">
-{%- if page.show_title != true -%}
-<h1 class="entry-title screen-reader-text">{{ page.title }}</h1>
-{%- else -%}
-<div class="entry-info">
-<h1 class="entry-title h0">{{ page.title }}</h1>
-{%- if site.description_tagline -%}
-<p class="h2">{{ site.description_tagline }}</p>
-{%- endif -%}
-{%- if site.description -%}
-<p class="h3 site-excerpt">{{ site.description }}</p>
-{%- endif -%}
-</div>
-{%- endif -%}
-</header>
+    <header class="entry-header">
+        {%- if page.show_title != true -%}
+        <h1 class="entry-title screen-reader-text">{{ page.title }}</h1>
+        {%- else -%}
+        <div class="entry-info">
+            <h1 class="entry-title h0">{{ page.title }}</h1>
+            {%- if site.description_tagline -%}
+            <p class="h2">{{ site.description_tagline }}</p>
+            {%- endif -%}
+            {%- if site.description -%}
+            <p class="h3 site-excerpt">{{ site.description }}</p>
+            {%- endif -%}
+        </div>
+        {%- endif -%}
+    </header>
 
-{%- endif -%}
+    {%- endif -%}
 
-{%- if site.description -%}
+    {%- if site.description -%}
 
-<main class="entry-content no-top-margin">
+    <main class="entry-content no-top-margin">
 
-{%- if page.show_title != true -%}
+        {%- if page.show_title != true -%}
 
-{%- if site.description_tagline -%}
-<p class="h0">{{ site.description_tagline }}</p>
-{%- endif -%}
+        {%- if site.description_tagline -%}
+        <p class="h0">{{ site.description_tagline }}</p>
+        {%- endif -%}
 
-{%- if site.description -%}
-<p class="h3 site-excerpt">{{ site.description }}</p>
-{%- endif -%}
+        {%- if site.description -%}
+        <p class="h3 site-excerpt">{{ site.description }}</p>
+        {%- endif -%}
 
-{%- endif -%}
+        {%- endif -%}
 
-</main>
+    </main>
 
-{%- else if site.content -%}
+    {%- else if site.content -%}
 
-<main class="entry-content">{{ content }}</main>
+    <main class="entry-content">{{ content }}</main>
 
-{%- endif -%}
+    {%- endif -%}
 
-{%- if site.posts.size > 0 -%}
+    {%- if site.posts.size > 0 -%}
 
-<aside class="entry-feed">
+    <aside class="entry-feed">
 
-<h2 class="entry-list-header{% if page.show_list_title? != true %} screen-reader-text{% endif %}">{{ page.list_title | default: "Posts" }}</h2>
-<ul class="entry-list">
+        <h2 class="entry-list-header{% if page.show_list_title? != true %} screen-reader-text{% endif %}">{{ page.list_title | default: "Posts" }}</h2>
+        <ul class="entry-list">
 
-{%- for post in site.posts -%}
-<li>
+            {%- for post in site.posts -%}
+            <li>
 
-<article class="post">
+                <article class="post">
 
-<header class="entry-header">
+                    <header class="entry-header">
 
-{% if post.thumbnail %}
-<div class="entry-thumbnail">
-<img src="{{ post.thumbnail | prepend: '/assets/images/thumbnails/' | relative_url }}" alt="{{ post.title | escape }}" width="100%" height="100%">
-</div>
-{% endif %}
+                        {% if post.thumbnail %}
+                        <div class="entry-thumbnail">
+                            <img src="{{ post.thumbnail | prepend: '/assets/images/thumbnails/' | relative_url }}" alt="{{ post.title | escape }}" width="100%" height="100%">
+                        </div>
+                        {% endif %}
 
-<a class="entry-info {% if post.thumbnail %}with-thumbnail{% endif %}" href="{{ post.url | relative_url }}">
-{%- assign date_format = site.aemi.date_format | default: "%b %-d, %Y" -%}
-<span class="entry-meta">{{ post.date | date: date_format }}</span>
-<h3 class="entry-title entry-link">{{ post.title | escape }}</h3>
-</a>
-</header>
+                        <a class="entry-info {% if post.thumbnail %}with-thumbnail{% endif %}" href="{{ post.url | relative_url }}">
+                            {%- assign date_format = site.aemi.date_format | default: "%b %-d, %Y" -%}
+                            <span class="entry-meta">{{ post.date | date: date_format }}</span>
+                            <h3 class="entry-title entry-link">{{ post.title | escape }}</h3>
+                        </a>
+                    </header>
 
-{%- if site.show_excerpts -%}
-<main class="entry-content">
-{{ post.excerpt }}
-</main>
-{%- endif -%}
+                    {%- if site.show_excerpts -%}
+                    <main class="entry-content">
+                        {{ post.excerpt }}
+                    </main>
+                    {%- endif -%}
 
-</article>
+                </article>
+            
+            </li>
 
-</li>
+            {%- endfor -%}
 
-{%- endfor -%}
+        </ul>
 
-</ul>
-
-</aside>
-
-{%- endif -%}
+    </aside>
+    
+    {%- endif -%}
 
 </section>
