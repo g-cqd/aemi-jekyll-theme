@@ -28,6 +28,8 @@
         <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a target="_blank" href="https://github.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-github"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
         {%- when "twitter" -%}
         <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a target="_blank" href="https://www.twitter.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-twitter"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
+        {%- when "x" -%}
+        <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a target="_blank" href="https://x.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-x"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
         {%- when "dribble" -%}
         <li {% if network.order != nil %}style="order:{{ network.order | escape }}"{% endif %}><a target="_blank" href="https://dribbble.com/{{ network_cgi_usr }}"><svg class="svg-icon"><use xlink:href="#svg-dribble"></use></svg> <span class="username">{{ network_usr }}</span></a></li>
         {%- when "youtube" -%}

@@ -70,16 +70,8 @@ https://rsms.me/inter/font-files/InterDisplay-Black.woff2
 https://rsms.me/inter/font-files/InterDisplay-Black.woff
 https://rsms.me/inter/font-files/InterDisplay-BlackItalic.woff2
 https://rsms.me/inter/font-files/InterDisplay-BlackItalic.woff
-https://rsms.me/inter/font-files/Inter-roman.var.woff2
-https://rsms.me/inter/font-files/Inter-italic.var.woff2
-https://rsms.me/inter/font-files/InterDisplay-roman.var.woff2
-https://rsms.me/inter/font-files/InterDisplay-italic.var.woff2
-https://rsms.me/inter/font-files/Inter-roman.var.woff2
-https://rsms.me/inter/font-files/Inter-italic.var.woff2
-https://rsms.me/inter/font-files/InterDisplay-roman.var.woff2
-https://rsms.me/inter/font-files/InterDisplay-italic.var.woff2
-https://rsms.me/inter/font-files/Inter.var.woff2
-https://rsms.me/inter/font-files/InterDisplay.var.woff2
+https://rsms.me/inter/font-files/InterVariable.woff2
+https://rsms.me/inter/font-files/InterVariable-Italic.woff2
 https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Thin.woff2
 https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-ThinItalic.woff2
 https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-ExtraLight.woff2
@@ -90,6 +82,8 @@ https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/
 https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Italic.woff2
 https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Medium.woff2
 https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-MediumItalic.woff2
+https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-SemiBold.woff2
+https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-SemiBoldItalic.woff2
 https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Bold.woff2
 https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-BoldItalic.woff2
 https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-ExtraBold.woff2
