@@ -88,3 +88,5 @@ https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/
 https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-BoldItalic.woff2
 https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-ExtraBold.woff2
 https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-ExtraBoldItalic.woff2
+https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/variable/JetBrainsMono-Italic[wght].woff2
+https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/variable/JetBrainsMono[wght].woff2

@@ -336,7 +336,7 @@
     font-style: italic;
     font-weight: 100 900;
     font-display: swap;
-    src: url('/assets/font-files/InterVariable-Italic.woff') format('woff2'),
+    src: url('/assets/font-files/InterVariable-Italic.woff2') format('woff2'),
         url("https://rsms.me/inter/font-files/InterVariable-Italic.woff2") format("woff2");
 }
 
@@ -502,19 +502,55 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: JetBrainsMonoVariable;
+    font-style: normal;
+    font-weight: 100 800;
+    font-display: swap;
+    src: url('/assets/font-files/JetBrainsMono[wght].woff2') format('woff2'),
+        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/variable/JetBrainsMono[wght].woff2") format("woff2");
+}
+
+@font-face {
+    font-family: JetBrainsMonoVariable;
+    font-style: italic;
+    font-weight: 100 800;
+    font-display: swap;
+    src: url('/assets/font-files/JetBrainsMono-Italic[wght].woff2') format('woff2'),
+        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/variable/JetBrainsMono-Italic[wght].woff2") format("woff2");
+}
+
 :root {
 
     font-weight: var(--base-font-weight);
-    font-feature-settings: "wght" var(--base-font-weight);
     font-size: var(--base-font-size);
     font-family: var(--base-font-family);
     line-height: var(--base-line-height);
 
-    // Font Kerning
-    -webkit-font-feature-settings: "kern" 1;
-    -moz-font-feature-settings: "kern" 1;
-    -o-font-feature-settings: "kern" 1;
-    font-feature-settings: "kern" 1;
+    -webkit-font-feature-settings: "kern" 1,
+        "liga" 1,
+        "calt" 1,
+        "dlig" 1,
+        "ccmp" 1,
+        "wght" var(--base-font-weight);
+    -moz-font-feature-settings: "kern" 1,
+        "liga" 1,
+        "calt" 1,
+        "dlig" 1,
+        "ccmp" 1,
+        "wght" var(--base-font-weight);
+    -o-font-feature-settings: "kern" 1,
+        "liga" 1,
+        "calt" 1,
+        "dlig" 1,
+        "ccmp" 1,
+        "wght" var(--base-font-weight);
+    font-feature-settings: "kern" 1,
+        "liga" 1,
+        "calt" 1,
+        "dlig" 1,
+        "ccmp" 1,
+        "wght" var(--base-font-weight);
     font-kerning: normal;
 
 	text-rendering: optimizeLegibility;
@@ -529,10 +565,7 @@
     -moz-osx-font-smoothing: auto;
     font-smooth: auto;
 
-    font-variant-ligatures: contextual common-ligatures discretionary-ligatures;
-
     hyphens: auto;
-    letter-spacing: -0.011em;
 
 	vertical-align: baseline;
 	word-spacing: normal;

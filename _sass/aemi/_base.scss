@@ -208,7 +208,7 @@ h6,
 .h7 {
     font-family: var(--head-font-family);
     font-weight: var(--head-font-weight);
-    font-feature-settings: "wght" var(--head-font-weight);
+    font-feature-settings: inherit, "wght" var(--head-font-weight);
 
     &:only-child {
         margin-bottom: 0;
