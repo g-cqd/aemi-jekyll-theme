@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "aemi"
-  spec.version       = "1.2.2"
+  spec.version       = "1.2.3"
   spec.authors       = ["Guillaume C"]
   spec.email         = ["public@gcqd.fr"]
 
