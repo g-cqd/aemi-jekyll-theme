@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "aemi"
-  spec.version       = "1.2.3"
+  spec.version       = "1.2.4"
   spec.authors       = ["Guillaume C"]
   spec.email         = ["public@gcqd.fr"]
 
@@ -22,10 +22,10 @@ Gem::Specification.new do |spec|
   spec.files         += Dir['robots.txt']
 
   spec.required_ruby_version = ">= 2.7.0"
-  spec.add_runtime_dependency "jekyll", "~> 4.3.3",">= 4.3.3"
-  spec.add_runtime_dependency "jekyll-feed", "~> 0.17",">= 0.17"
-  spec.add_runtime_dependency "aemi-seo-tag", "~> 0.0.1", ">= 0.0.1"
-  spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4.0",">= 1.4.0"
+  spec.add_runtime_dependency "jekyll", ">= 4.3.3"
+  spec.add_runtime_dependency "jekyll-feed", ">= 0.17"
+  spec.add_runtime_dependency "aemi-seo-tag", ">= 0.0.1"
+  spec.add_runtime_dependency "jekyll-sitemap", ">= 1.4.0"
 
-  spec.add_development_dependency "webrick", "~> 1.7",">= 1.7"
+  spec.add_development_dependency "webrick", ">= 1.7"
 end
