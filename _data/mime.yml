@@ -14,7 +14,7 @@ types:
       type: png
   video:
     -
-      ext: avif.webm
+      ext: mp4
       type: av1
     -
       ext: mov
@@ -22,7 +22,4 @@ types:
     -
       ext: webm
       type: webm
-    -
-      ext: mp4
-      type: mp4
 
