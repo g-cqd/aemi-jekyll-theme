@@ -14,15 +14,15 @@ types:
       type: png
   video:
     -
-      ext: avif
+      ext: avif.mp4
       type: av1
     -
-      ext: mov
+      ext: h265.mp4
       type: H265
     -
-      ext: mp4
+      ext: h264.mp4
       type: mp4
     -
-      ext: webm
+      ext: webm.mp4
       type: webm
 
