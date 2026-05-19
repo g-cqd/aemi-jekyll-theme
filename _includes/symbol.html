@@ -1,0 +1,35 @@
+{%- comment -%}
+Render an SF Symbol by its canonical name (e.g. `house.fill`).
+Resolves the PUA codepoint from `_data/sfsymbols.json`.
+
+Usage:
+    {% include symbol.html name="house.fill" %}
+    {% include symbol.html name="paperplane" label="Send" %}
+    {% include symbol.html name="link" inline=true %}
+
+Output:
+    <span class="sf-symbol" aria-hidden="true">􀎟</span>
+
+If `label` is set, the symbol becomes a non-decorative element with an
+accessible name; if omitted, the symbol is marked aria-hidden so screen
+readers skip it.
+{%- endcomment -%}
+
+{%- assign symbol_name = include.name | strip -%}
+{%- assign symbol_glyph = nil -%}
+{%- for pair in site.data.sfsymbols -%}
+    {%- if pair[0] == symbol_name -%}
+        {%- assign symbol_glyph = pair[1] -%}
+        {%- break -%}
+    {%- endif -%}
+{%- endfor -%}
+
+{%- if symbol_glyph -%}
+    {%- if include.label -%}
+        <span class="sf-symbol{% if include.inline %} sf-symbol-inline{% endif %}" role="img" aria-label="{{ include.label | escape }}">{{ symbol_glyph }}</span>
+    {%- else -%}
+        <span class="sf-symbol{% if include.inline %} sf-symbol-inline{% endif %}" aria-hidden="true">{{ symbol_glyph }}</span>
+    {%- endif -%}
+{%- else -%}
+    <span class="sf-symbol sf-symbol-missing" aria-label="missing SF Symbol {{ symbol_name | escape }}" title="missing SF Symbol {{ symbol_name | escape }}">?</span>
+{%- endif -%}

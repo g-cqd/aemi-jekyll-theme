@@ -1,70 +1,56 @@
 /**
- * Variable fonts only — Inter and JetBrains Mono.
- * Self-hosted via /assets/font-files/. No external fallbacks.
+ * Font faces — declared against the build-time subsetted WOFF2 files
+ * written into /assets/font-files/ by bin/subset-fonts.py at the
+ * consuming site. The browser uses -apple-system / BlinkMacSystemFont
+ * first, so on Apple platforms no font is downloaded at all; the
+ * Cupertino Pro fallback only ships on non-Apple devices.
  */
 
 @font-face {
-    font-family: InterVariable;
+    font-family: "Cupertino Pro";
     font-style: normal;
-    font-weight: 100 900;
+    font-weight: 1 1000;
     font-display: swap;
-    src: url('/assets/font-files/InterVariable.woff2') format('woff2-variations'),
-         url('/assets/font-files/InterVariable.woff2') format('woff2');
+    font-stretch: 30% 150%;
+    src: url("/assets/font-files/SFPro.woff2") format("woff2-variations"),
+         url("/assets/font-files/SFPro.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: InterVariable;
+    font-family: "Cupertino Pro";
     font-style: italic;
-    font-weight: 100 900;
+    font-weight: 1 1000;
     font-display: swap;
-    src: url('/assets/font-files/InterVariable-Italic.woff2') format('woff2-variations'),
-         url('/assets/font-files/InterVariable-Italic.woff2') format('woff2');
+    src: url("/assets/font-files/SFPro-Italic.woff2") format("woff2-variations"),
+         url("/assets/font-files/SFPro-Italic.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: 'Inter var';
-    font-style: normal;
-    font-weight: 100 900;
-    font-display: swap;
-    src: url('/assets/font-files/InterVariable.woff2') format('woff2-variations'),
-         url('/assets/font-files/InterVariable.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Inter var';
-    font-style: italic;
-    font-weight: 100 900;
-    font-display: swap;
-    src: url('/assets/font-files/InterVariable-Italic.woff2') format('woff2-variations'),
-         url('/assets/font-files/InterVariable-Italic.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: JetBrainsMonoVariable;
+    font-family: "JetBrains Mono";
     font-style: normal;
     font-weight: 100 800;
     font-display: swap;
-    src: url('/assets/font-files/JetBrainsMonoVariable.woff2') format('woff2-variations'),
-         url('/assets/font-files/JetBrainsMonoVariable.woff2') format('woff2');
+    src: url("/assets/font-files/JetBrainsMono.woff2") format("woff2-variations"),
+         url("/assets/font-files/JetBrainsMono.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: JetBrainsMonoVariable;
+    font-family: "JetBrains Mono";
     font-style: italic;
     font-weight: 100 800;
     font-display: swap;
-    src: url('/assets/font-files/JetBrainsMonoVariable-Italic.woff2') format('woff2-variations'),
-         url('/assets/font-files/JetBrainsMonoVariable-Italic.woff2') format('woff2');
+    src: url("/assets/font-files/JetBrainsMono-Italic.woff2") format("woff2-variations"),
+         url("/assets/font-files/JetBrainsMono-Italic.woff2") format("woff2");
 }
 
 :root {
-
     font-weight: var(--base-font-weight);
     font-size: var(--base-font-size);
     font-family: var(--base-font-family);
     line-height: var(--base-line-height);
 
-    font-feature-settings: "kern" 1,
+    font-feature-settings:
+        "kern" 1,
         "liga" 1,
         "calt" 1,
         "dlig" 1,
@@ -74,7 +60,6 @@
 
     text-rendering: optimizeLegibility;
     font-optical-sizing: auto;
-
     font-size-adjust: 100%;
 
     -webkit-font-smoothing: auto;
@@ -82,7 +67,6 @@
     font-smooth: auto;
 
     hyphens: auto;
-
     vertical-align: baseline;
     word-spacing: normal;
 }

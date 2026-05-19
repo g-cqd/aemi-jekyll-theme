@@ -491,6 +491,34 @@ progress {
     vertical-align: text-top;
 }
 
+/**
+ * SF Symbols rendered via `{% include symbol.html name="..." %}`.
+ * Glyphs live in the PUA codepoints of Cupertino Pro / SF Pro.
+ */
+.sf-symbol {
+    font-family: -apple-system, BlinkMacSystemFont, "Cupertino Pro", "SF Pro", system-ui, sans-serif;
+    font-feature-settings: normal;
+    font-variant-ligatures: none;
+    speak: none;
+    line-height: 1;
+    text-rendering: geometricPrecision;
+}
+
+.sf-symbol-inline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: -0.125em;
+}
+
+.sf-symbol-missing {
+    color: var(--brand-color);
+    background-color: var(--background-color-light);
+    border-radius: calc(var(--border-radius) / 2);
+    padding: 0 0.25em;
+    font-size: 0.85em;
+}
+
 
 
 /**

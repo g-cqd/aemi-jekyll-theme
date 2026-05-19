@@ -11,6 +11,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files          = Dir['_data/*.yml']
+  spec.files         += Dir['_data/*.json']
   spec.files         += Dir['_includes/*.html']
   spec.files         += Dir['_layouts/*.html']
   spec.files         += Dir['_sass/*.scss']
@@ -18,7 +19,8 @@ Gem::Specification.new do |spec|
   spec.files         += Dir['assets/main.scss']
   spec.files         += Dir['assets/index.html']
   spec.files         += Dir['assets/images/**/*']
-  spec.files         += Dir['assets/font-files/*']
+  spec.files         += Dir['source-fonts/*.woff2']
+  spec.files         += Dir['source-fonts/*.txt']
   spec.files         += Dir['robots.txt']
 
   spec.required_ruby_version = ">= 2.7.0"
