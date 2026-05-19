@@ -41,21 +41,21 @@ pre.highlight {
     }
 
 
-    .g { color:var(--syntax-generic) } /* Generic */
+    .g { color: var(--syntax-foreground) } /* Generic */
 
     /* Keyword */
     .k {
         color: var(--syntax-keyword)
     }
-    // .l { color: #93a1a1 } /* Literal */
-    // .n { color: #93a1a1 } /* Name */
+    .l { color: var(--syntax-constant) } /* Literal */
+    .n { color: var(--syntax-foreground) } /* Name */
     .o {
         color: var(--syntax-operator)
     }
 
     /* Operator */
-    // .x { color: #cb4b16 } /* Other */
-    // .p { color: #93a1a1 } /* Punctuation */
+    .x { color: var(--syntax-accent) } /* Other */
+    .p { color: var(--syntax-ui) } /* Punctuation */
     .cm {
         color: var(--syntax-comment)
     }
@@ -158,7 +158,7 @@ pre.highlight {
     }
 
     /* Keyword.Type */
-    // .ld { color: #93a1a1 } /* Literal.Date */
+    .ld { color: var(--syntax-constant) } /* Literal.Date */
     .m {
         color: var(--syntax-constant)
     }
@@ -219,8 +219,8 @@ pre.highlight {
     }
 
     /* Name.Namespace */
-    // .nx { color: #93a1a1 } /* Name.Other */
-    // .py { color: #93a1a1 } /* Name.Property */
+    .nx { color: var(--syntax-entity) } /* Name.Other */
+    .py { color: var(--syntax-entity) } /* Name.Property */
     .nt {
         color: var(--syntax-tag)
     }

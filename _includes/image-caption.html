@@ -1,13 +1,17 @@
 <figure class="image with-caption">
     <picture>
-        {% for format in site.data.mime.types.images %}
+        {%- for format in site.data.mime.types.images -%}
         <source srcset="{{ include.name | relative_url }}.{{ format.ext }}" type="image/{{ format.type }}">
-        {% endfor %}
-        <img src="{{ include.name | relative_url }}.png" {% if include.alt != nil %}alt="{{ include.alt | escape }}"{% endif %} loading="lazy">
+        {%- endfor -%}
+        <img src="{{ include.name | relative_url }}.jpg"
+            {%- if include.alt %} alt="{{ include.alt | escape }}"{% endif %}
+            {%- if include.width %} width="{{ include.width }}"{% endif %}
+            {%- if include.height %} height="{{ include.height }}"{% endif %}
+            loading="lazy" decoding="async">
     </picture>
-    {% if include.caption != nil %}
+    {%- if include.caption -%}
     <figcaption>{{ include.caption | escape }}</figcaption>
-    {% else if include.alt != nil %}
+    {%- elsif include.alt -%}
     <figcaption>{{ include.alt | escape }}</figcaption>
-    {% endif %}
+    {%- endif -%}
 </figure>

@@ -6,7 +6,7 @@
             <a class="footer-title brand" rel="author" href="{{ '/' | relative_url }}">
                 {%- if site.logo -%}
                 <strong class="screen-reader-text">{{ site.title | escape }}</strong>
-                <img src="{{ site.logo | relative_url }}" alt="{{ site.title | escape }}" height="2rem">
+                <img src="{{ site.logo | relative_url }}" alt="{{ site.title | escape }}" width="78" height="32" decoding="async" loading="lazy">
                 {%- else -%}
                 <strong class="h2">{{ site.title | escape }}</strong>
                 {%- endif -%}
@@ -34,7 +34,12 @@
             </div>
 
             <div class="footer-cell">
-                <p>{{- site.colophon | escape -}}</p>
+                {%- capture current_year -%}{{ site.time | date: '%Y' }}{%- endcapture -%}
+                {%- if site.colophon -%}
+                <p>{{ site.colophon | replace: 'YYYY', current_year | escape }}</p>
+                {%- else -%}
+                <p>&copy; {{ current_year }}</p>
+                {%- endif -%}
             </div>
         </div>
 

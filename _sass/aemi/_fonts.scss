@@ -1,334 +1,15 @@
-@font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 100;
-    font-display: swap;
-    src:url("/assets/font-files/Inter-Thin.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-Thin.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: italic;
-    font-weight: 100;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-ThinItalic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-ThinItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: normal;
-    font-weight: 100;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-Thin.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-Thin.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: italic;
-    font-weight: 100;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-ThinItalic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-ThinItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 200;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-ExtraLight.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-ExtraLight.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: italic;
-    font-weight: 200;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-ExtraLightItalic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-ExtraLightItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: normal;
-    font-weight: 200;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-ExtraLight.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-ExtraLight.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: italic;
-    font-weight: 200;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-ExtraLightItalic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-ExtraLightItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-Light.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-Light.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: italic;
-    font-weight: 300;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-LightItalic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-LightItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-Light.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-Light.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: italic;
-    font-weight: 300;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-LightItalic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-LightItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-Regular.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-Regular.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-Italic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-Italic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-Regular.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-Regular.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-Italic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-Italic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-Medium.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-Medium.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: italic;
-    font-weight: 500;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-MediumItalic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-MediumItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-Medium.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-Medium.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: italic;
-    font-weight: 500;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-MediumItalic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-MediumItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-SemiBold.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-SemiBold.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: italic;
-    font-weight: 600;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-SemiBoldItalic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-SemiBoldItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-SemiBold.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-SemiBold.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: italic;
-    font-weight: 600;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-SemiBoldItalic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-SemiBoldItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-Bold.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-Bold.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-BoldItalic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-BoldItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-Bold.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-Bold.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-BoldItalic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-BoldItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-ExtraBold.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-ExtraBold.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: italic;
-    font-weight: 800;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-ExtraBoldItalic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-ExtraBoldItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-ExtraBold.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-ExtraBold.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: italic;
-    font-weight: 800;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-ExtraBoldItalic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-ExtraBoldItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-Black.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-Black.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style: italic;
-    font-weight: 900;
-    font-display: swap;
-    src: url("/assets/font-files/Inter-BlackItalic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/Inter-BlackItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-Black.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-Black.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter Display";
-    font-style: italic;
-    font-weight: 900;
-    font-display: swap;
-    src: url("/assets/font-files/InterDisplay-BlackItalic.woff2") format("woff2"),
-        url("https://rsms.me/inter/font-files/InterDisplay-BlackItalic.woff2") format("woff2");
-}
+/**
+ * Variable fonts only — Inter and JetBrains Mono.
+ * Self-hosted via /assets/font-files/. No external fallbacks.
+ */
 
 @font-face {
     font-family: InterVariable;
     font-style: normal;
     font-weight: 100 900;
     font-display: swap;
-    src: url('/assets/font-files/InterVariable.woff2') format('woff2'),
-        url("https://rsms.me/inter/font-files/InterVariable.woff2") format("woff2");
+    src: url('/assets/font-files/InterVariable.woff2') format('woff2-variations'),
+         url('/assets/font-files/InterVariable.woff2') format('woff2');
 }
 
 @font-face {
@@ -336,8 +17,8 @@
     font-style: italic;
     font-weight: 100 900;
     font-display: swap;
-    src: url('/assets/font-files/InterVariable-Italic.woff2') format('woff2'),
-        url("https://rsms.me/inter/font-files/InterVariable-Italic.woff2") format("woff2");
+    src: url('/assets/font-files/InterVariable-Italic.woff2') format('woff2-variations'),
+         url('/assets/font-files/InterVariable-Italic.woff2') format('woff2');
 }
 
 @font-face {
@@ -345,8 +26,8 @@
     font-style: normal;
     font-weight: 100 900;
     font-display: swap;
-    src: url('/assets/font-files/InterVariable.woff2') format('woff2'),
-        url("https://rsms.me/inter/font-files/InterVariable.woff2") format("woff2");
+    src: url('/assets/font-files/InterVariable.woff2') format('woff2-variations'),
+         url('/assets/font-files/InterVariable.woff2') format('woff2');
 }
 
 @font-face {
@@ -354,152 +35,8 @@
     font-style: italic;
     font-weight: 100 900;
     font-display: swap;
-    src: url('/assets/font-files/InterVariable-Italic.woff') format('woff2'),
-        url("https://rsms.me/inter/font-files/InterVariable-Italic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("/assets/font-files/JetBrainsMono-Thin.woff2") format("woff2"),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Thin.woff2") format("woff2");
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("/assets/font-files/JetBrainsMono-ThinItalic.woff2") format("woff2"),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-ThinItalic.woff2") format("woff2");
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("/assets/font-files/JetBrainsMono-ExtraLight.woff2") format("woff2"),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-ExtraLight.woff2") format("woff2");
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("/assets/font-files/JetBrainsMono-ExtraLightItalic.woff2") format("woff2"),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-ExtraLightItalic.woff2") format("woff2");
-    font-weight: 200;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("/assets/font-files/JetBrainsMono-Light.woff2") format("woff2"),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Light.woff2") format("woff2");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("/assets/font-files/JetBrainsMono-LightItalic.woff2") format("woff2"),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-LightItalic.woff2") format("woff2");
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("/assets/font-files/JetBrainsMono-Regular.woff2") format("woff2"),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("/assets/font-files/JetBrainsMono-Italic.woff2") format("woff2"),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Italic.woff2") format("woff2");
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("/assets/font-files/JetBrainsMono-Medium.woff2") format("woff2"),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Medium.woff2") format("woff2");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("/assets/font-files/JetBrainsMono-MediumItalic.woff2") format("woff2"),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-MediumItalic.woff2") format("woff2");
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("/assets/font-files/JetBrainsMono-SemiBold.woff2") format("woff2"),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-SemiBold.woff2") format("woff2");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("/assets/font-files/JetBrainsMono-SemiBoldItalic.woff2") format("woff2"),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-SemiBoldItalic.woff2") format("woff2");
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("/assets/font-files/JetBrainsMono-Bold.woff2") format("woff2"),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Bold.woff2") format("woff2");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("/assets/font-files/JetBrainsMono-BoldItalic.woff2") format("woff2"),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-BoldItalic.woff2") format("woff2");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("/assets/font-files/JetBrainsMono-ExtraBold.woff2") format("woff2"),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-ExtraBold.woff2") format("woff2");
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("/assets/font-files/JetBrainsMono-ExtraBoldItalic.woff2") format("woff2"),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-ExtraBoldItalic.woff2") format("woff2");
-    font-weight: 800;
-    font-style: italic;
-    font-display: swap;
+    src: url('/assets/font-files/InterVariable-Italic.woff2') format('woff2-variations'),
+         url('/assets/font-files/InterVariable-Italic.woff2') format('woff2');
 }
 
 @font-face {
@@ -507,8 +44,8 @@
     font-style: normal;
     font-weight: 100 800;
     font-display: swap;
-    src: url('/assets/font-files/JetBrainsMonoVariable.woff2') format('woff2'),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/variable/JetBrainsMono[wght].woff2") format("woff2");
+    src: url('/assets/font-files/JetBrainsMonoVariable.woff2') format('woff2-variations'),
+         url('/assets/font-files/JetBrainsMonoVariable.woff2') format('woff2');
 }
 
 @font-face {
@@ -516,8 +53,8 @@
     font-style: italic;
     font-weight: 100 800;
     font-display: swap;
-    src: url('/assets/font-files/JetBrainsMonoVariable-Italic.woff2') format('woff2'),
-        url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/variable/JetBrainsMono-Italic[wght].woff2") format("woff2");
+    src: url('/assets/font-files/JetBrainsMonoVariable-Italic.woff2') format('woff2-variations'),
+         url('/assets/font-files/JetBrainsMonoVariable-Italic.woff2') format('woff2');
 }
 
 :root {
@@ -527,24 +64,6 @@
     font-family: var(--base-font-family);
     line-height: var(--base-line-height);
 
-    -webkit-font-feature-settings: "kern" 1,
-        "liga" 1,
-        "calt" 1,
-        "dlig" 1,
-        "ccmp" 1,
-        "wght" var(--base-font-weight);
-    -moz-font-feature-settings: "kern" 1,
-        "liga" 1,
-        "calt" 1,
-        "dlig" 1,
-        "ccmp" 1,
-        "wght" var(--base-font-weight);
-    -o-font-feature-settings: "kern" 1,
-        "liga" 1,
-        "calt" 1,
-        "dlig" 1,
-        "ccmp" 1,
-        "wght" var(--base-font-weight);
     font-feature-settings: "kern" 1,
         "liga" 1,
         "calt" 1,
@@ -553,20 +72,17 @@
         "wght" var(--base-font-weight);
     font-kerning: normal;
 
-	text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
     font-optical-sizing: auto;
 
-    // Font Size Adjust
-    -webkit-font-size-adjust: 100%;
     font-size-adjust: 100%;
 
-    // Font Smoothing
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
     font-smooth: auto;
 
     hyphens: auto;
 
-	vertical-align: baseline;
-	word-spacing: normal;
+    vertical-align: baseline;
+    word-spacing: normal;
 }

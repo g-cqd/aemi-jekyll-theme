@@ -1,17 +1,13 @@
+{%- assign quality = include.quality | default: '720p' -%}
 <figure class="video with-caption">
-    <video {% if include.autoplay == true %}autoplay{% endif %}
-        {% if include.loop == true %}loop{% endif %}
-        {% if include.muted == true %}muted{% endif %}
-        {% if include.controls == true %}controls{% endif %}
-        {% if include.alt != nil %}alt="{{ include.alt | escape }}"{% endif %}
-        width="100%">
-        {% for format in site.data.mime.types.video %}
-        <source src="{{ include.name }}.{{ format.ext }}" type="video/{{ format.type }}">
-        {% endfor %}
+    <video {% if include.autoplay %}autoplay {% endif %}{% if include.loop %}loop {% endif %}{% if include.muted %}muted {% endif %}{% if include.controls %}controls {% endif %}{% if include.poster %}poster="{{ include.poster | relative_url }}" {% endif %}preload="metadata" playsinline width="100%"{% if include.alt %} aria-label="{{ include.alt | escape }}"{% endif %}>
+        {%- for format in site.data.mime.types.video -%}
+        <source src="{{ include.name }}.{{ quality }}.{{ format.ext }}" type="video/{{ format.type }}">
+        {%- endfor -%}
     </video>
-    {% if include.caption != nil %}
+    {%- if include.caption -%}
     <figcaption>{{ include.caption | escape }}</figcaption>
-    {% else if include.alt != nil %}
+    {%- elsif include.alt -%}
     <figcaption>{{ include.alt | escape }}</figcaption>
-    {% endif %}
+    {%- endif -%}
 </figure>
