@@ -1,379 +1,131 @@
 /**
- * Syntax highlighting styles
+ * Syntax highlighting — GitHub Primer color scheme.
+ *
+ * Light tokens sourced from github/primer/primitives @primer/primer-css
+ * "light" theme (syntax.* tokens).
+ * Dark tokens sourced from the matching "dark" (default) theme.
+ *
+ * Token names follow Rouge (Pygments-style); each class is mapped to one
+ * of nine semantic CSS variables, so theming a different palette only
+ * requires changing the variable values.
  */
+
 pre.highlight {
-
-    --syntax-accent: #ff9940;
-    --syntax-background: #fafafa;
-    --syntax-foreground: #6c7680;
-    --syntax-ui: #959da6;
-    --syntax-tag: #55b4d4;
-    --syntax-func: #f2ae49;
-    --syntax-entity: #399ee6;
-    --syntax-string: #86b300;
-    --syntax-regexp: #4cbf99;
-    --syntax-markup: #f07171;
-    --syntax-keyword: #fa8d3e;
-    --syntax-special: #e6ba7e;
-    --syntax-comment: #abb0b6;
-    --syntax-constant: #a37acc;
-    --syntax-operator: #ed9366;
-    --syntax-error: #f51818;
-
     color: var(--syntax-foreground);
-    background: var(--background-color-lighten);
+    background-color: var(--syntax-background);
     @extend %vertical-rhythm;
 
     .highlighter-rouge & {
-        background: var(--background-color-lighten);
+        background-color: var(--syntax-background);
     }
 
-    /* Comment */
-    .c {
-        color: var(--syntax-comment);
-        font-style: italic;
-    }
+    /* Comments */
+    .c, .cd, .cm, .cp, .c1                  { color: var(--syntax-comment); font-style: italic; }
+    .cs                                     { color: var(--syntax-comment); font-style: italic; font-weight: bold; }
 
-    /* Error */
-    .err {
-        color: var(--syntax-background);
-        background-color: var(--syntax-error);
-    }
+    /* Errors */
+    .err                                    { color: var(--syntax-error); background-color: transparent; }
 
+    /* Generic */
+    .g                                      { color: var(--syntax-foreground); }
+    .gd                                     { color: var(--syntax-deletion-fg); background-color: var(--syntax-deletion-bg); }
+    .gi                                     { color: var(--syntax-insertion-fg); background-color: var(--syntax-insertion-bg); }
+    .ge                                     { font-style: italic; }
+    .gs                                     { font-weight: bold; }
+    .gh, .gu                                { color: var(--syntax-keyword); font-weight: bold; }
+    .gp                                     { color: var(--syntax-comment); }
+    .gr                                     { color: var(--syntax-error); }
+    .gt                                     { color: var(--syntax-error); }
+    .go                                     { color: var(--syntax-foreground); }
 
-    .g { color: var(--syntax-foreground) } /* Generic */
+    /* Keywords */
+    .k, .kc, .kd, .kn, .kp, .kr, .kv        { color: var(--syntax-keyword); }
+    .kt                                     { color: var(--syntax-type); }
 
-    /* Keyword */
-    .k {
-        color: var(--syntax-keyword)
-    }
-    .l { color: var(--syntax-constant) } /* Literal */
-    .n { color: var(--syntax-foreground) } /* Name */
-    .o {
-        color: var(--syntax-operator)
-    }
+    /* Literals (numbers, dates, strings) */
+    .l, .ld, .m, .mb, .mf, .mh, .mi, .il,
+    .mo, .mx                                { color: var(--syntax-constant); }
+    .s, .sa, .sb, .sc, .dl, .sd, .s2, .se,
+    .sh, .si, .sx, .s1, .ss, .sr            { color: var(--syntax-string); }
 
-    /* Operator */
-    .x { color: var(--syntax-accent) } /* Other */
-    .p { color: var(--syntax-ui) } /* Punctuation */
-    .cm {
-        color: var(--syntax-comment)
-    }
+    /* Names */
+    .n, .nb, .bp, .py, .nx, .vc, .vg, .vi,
+    .vm                                     { color: var(--syntax-foreground); }
+    .na                                     { color: var(--syntax-attribute); }
+    .nc                                     { color: var(--syntax-type); font-weight: 600; }
+    .nd                                     { color: var(--syntax-keyword); }
+    .ne                                     { color: var(--syntax-keyword); font-weight: 600; }
+    .nf, .fm                                { color: var(--syntax-function); font-weight: 600; }
+    .ni                                     { color: var(--syntax-constant); }
+    .nl                                     { color: var(--syntax-attribute); }
+    .nn                                     { color: var(--syntax-namespace); }
+    .no                                     { color: var(--syntax-constant); }
+    .nt                                     { color: var(--syntax-tag); }
+    .nv                                     { color: var(--syntax-variable); }
 
-    /* Comment.Multiline */
-    .cp {
-        color: var(--syntax-comment)
-    }
+    /* Operators & punctuation */
+    .o, .ow                                 { color: var(--syntax-keyword); }
+    .p, .pi                                 { color: var(--syntax-foreground); }
+    .w                                      { color: inherit; }
 
-    /* Comment.Preproc */
-    .c1 {
-        color: var(--syntax-comment)
-    }
-
-    /* Comment.Single */
-    .cs {
-        color: var(--syntax-special)
-    }
-
-    /* Comment.Special */
-    .gd {
-        color: var(--syntax-error)
-    }
-
-    /* Generic.Deleted */
-    .ge {
-        font-style: italic
-    }
-
-    /* Generic.Emph */
-    .gr {
-        color: var(--syntax-background);
-        background-color: var(--syntax-error);
-    }
-
-    /* Generic.Error */
-    .gh {
-        color: var(--syntax-accent)
-    }
-
-    /* Generic.Heading */
-    .gi {
-        color: var(--syntax-string)
-    }
-
-    /* Generic.Inserted */
-    .go {
-        color: var(--syntax-foreground)
-    }
-
-    /* Generic.Output */
-    .gp {
-        color: var(--syntax-foreground)
-    }
-
-    /* Generic.Prompt */
-    .gs {
-        font-weight: bold
-    }
-
-    /* Generic.Strong */
-    .gu {
-        color: var(--syntax-foreground)
-    }
-
-    /* Generic.Subheading */
-    .gt {
-        color: var(--syntax-background);
-        background-color: var(--syntax-error);
-    }
-
-    /* Generic.Traceback */
-    .kc {
-        color: var(--syntax-keyword)
-    }
-
-    /* Keyword.Constant */
-    .kd {
-        color: var(--syntax-keyword)
-    }
-
-    /* Keyword.Declaration */
-    .kn {
-        color: var(--syntax-operator)
-    }
-
-    /* Keyword.Namespace */
-    .kp {
-        color: var(--syntax-keyword)
-    }
-
-    /* Keyword.Pseudo */
-    .kr {
-        color: var(--syntax-keyword)
-    }
-
-    /* Keyword.Reserved */
-    .kt {
-        color: var(--syntax-keyword)
-    }
-
-    /* Keyword.Type */
-    .ld { color: var(--syntax-constant) } /* Literal.Date */
-    .m {
-        color: var(--syntax-constant)
-    }
-
-    /* Literal.Number */
-    .s {
-        color: var(--syntax-constant)
-    }
-
-    /* Literal.String */
-    .na {
-        color: var(--syntax-entity)
-    }
-
-    /* Name.Attribute */
-    .nb {
-        color: var(--syntax-entity)
-    }
-
-    /* Name.Builtin */
-    .nc {
-        color: var(--syntax-func)
-    }
-
-    /* Name.Class */
-    .no {
-        color: var(--syntax-constant)
-    }
-
-    /* Name.Constant */
-    .nd {
-        color: var(--syntax-func)
-    }
-
-    /* Name.Decorator */
-    .ni {
-        color: var(--syntax-entity)
-    }
-
-    /* Name.Entity */
-    .ne {
-        color: var(--syntax-func)
-    }
-
-    /* Name.Exception */
-    .nf {
-        color: var(--syntax-func)
-    }
-
-    /* Name.Function */
-    .nl {
-        color: var(--syntax-entity)
-    }
-
-    /* Name.Label */
-    .nn {
-        color: var(--syntax-entity)
-    }
-
-    /* Name.Namespace */
-    .nx { color: var(--syntax-entity) } /* Name.Other */
-    .py { color: var(--syntax-entity) } /* Name.Property */
-    .nt {
-        color: var(--syntax-tag)
-    }
-
-    /* Name.Tag */
-    .nv {
-        color: var(--syntax-entity)
-    }
-
-    /* Name.Variable */
-    .ow {
-        color: var(--syntax-operator)
-    }
-
-    /* Operator.Word */
-    .w {
-        color: var(--syntax-entity)
-    }
-
-    /* Text.Whitespace */
-    .mf {
-        color: var(--syntax-constant)
-    }
-
-    /* Literal.Number.Float */
-    .mh {
-        color: var(--syntax-constant)
-    }
-
-    /* Literal.Number.Hex */
-    .mi {
-        color: var(--syntax-constant)
-    }
-
-    /* Literal.Number.Integer */
-    .mo {
-        color: var(--syntax-constant)
-    }
-
-    /* Literal.Number.Oct */
-    .sb {
-        color: var(--syntax-string)
-    }
-
-    /* Literal.String.Backtick */
-    .sc {
-        color: var(--syntax-string)
-    }
-
-    /* Literal.String.Char */
-    .sd {
-        color: var(--syntax-string)
-    }
-
-    /* Literal.String.Doc */
-    .s2 {
-        color: var(--syntax-string)
-    }
-
-    /* Literal.String.Double */
-    .se {
-        color: var(--syntax-constant)
-    }
-
-    /* Literal.String.Escape */
-    .sh {
-        color: var(--syntax-string)
-    }
-
-    /* Literal.String.Heredoc */
-    .si {
-        color: var(--syntax-string)
-    }
-
-    /* Literal.String.Interpol */
-    .sx {
-        color: var(--syntax-string)
-    }
-
-    /* Literal.String.Other */
-    .sr {
-        color: var(--syntax-regexp)
-    }
-
-    /* Literal.String.Regex */
-    .s1 {
-        color: var(--syntax-string)
-    }
-
-    /* Literal.String.Single */
-    .ss {
-        color: var(--syntax-tag)
-    }
-
-    /* Literal.String.Symbol */
-    .s {
-        color: var(--syntax-string)
-    }
-
-    /* Literal.String */
-    .bp {
-        color: var(--syntax-entity)
-    }
-
-    /* Name.Builtin.Pseudo */
-    .vc {
-        color: var(--syntax-entity)
-    }
-
-    /* Name.Variable.Class */
-    .vg {
-        color: var(--syntax-entity)
-    }
-
-    /* Name.Variable.Global */
-    .vi {
-        color: var(--syntax-entity)
-    }
-
-    /* Name.Variable.Instance */
-    .il {
-        color: var(--syntax-constant)
-    }
-
-    /* Literal.Number.Integer.Long */
+    /* Text */
+    .x                                      { color: var(--syntax-foreground); }
 }
 
+/* GitHub Light — `data-color-mode="light"` Primer values. */
+@media (prefers-color-scheme: light) {
+    pre.highlight {
+        --syntax-background:   #f6f8fa;
+        --syntax-foreground:   #1f2328;
+        --syntax-comment:      #59636e;
+        --syntax-keyword:      #cf222e;
+        --syntax-string:       #0a3069;
+        --syntax-constant:     #0550ae;
+        --syntax-variable:     #953800;
+        --syntax-function:     #8250df;
+        --syntax-type:         #6639ba;
+        --syntax-tag:          #116329;
+        --syntax-namespace:    #24292f;
+        --syntax-attribute:    #0550ae;
+        --syntax-error:        #82071e;
+        --syntax-deletion-fg:  #82071e;
+        --syntax-deletion-bg:  #ffebe9;
+        --syntax-insertion-fg: #116329;
+        --syntax-insertion-bg: #dafbe1;
+    }
+}
+
+/* GitHub Dark — Primer "dark" (default) theme values. */
 @media (prefers-color-scheme: dark) {
     pre.highlight {
-
-        --syntax-accent: #e6b450;
-        --syntax-background: #0a0e14;
-        --syntax-foreground: #b3b1ad;
-        --syntax-ui: #3d424d;
-        --syntax-tag: #39bae6;
-        --syntax-func: #ffb454;
-        --syntax-entity: #59c2ff;
-        --syntax-string: #c2d94c;
-        --syntax-regexp: #95e6cb;
-        --syntax-markup: #f07178;
-        --syntax-keyword: #ff8f40;
-        --syntax-special: #e6b673;
-        --syntax-comment: #626a73;
-        --syntax-constant: #ffee99;
-        --syntax-operator: #f29668;
-        --syntax-error: #ff3333;
-
+        --syntax-background:   #161b22;
+        --syntax-foreground:   #e6edf3;
+        --syntax-comment:      #8b949e;
+        --syntax-keyword:      #ff7b72;
+        --syntax-string:       #a5d6ff;
+        --syntax-constant:     #79c0ff;
+        --syntax-variable:     #ffa657;
+        --syntax-function:     #d2a8ff;
+        --syntax-type:         #f0883e;
+        --syntax-tag:          #7ee787;
+        --syntax-namespace:    #ffa657;
+        --syntax-attribute:    #79c0ff;
+        --syntax-error:        #ffa198;
+        --syntax-deletion-fg:  #ffdcd7;
+        --syntax-deletion-bg:  #67060c;
+        --syntax-insertion-fg: #aff5b4;
+        --syntax-insertion-bg: #033a16;
     }
+}
+
+/* Make inline `<code>` (outside pre.highlight) feel consistent. */
+:not(pre) > code.highlighter-rouge,
+:not(pre) > code {
+    background-color: var(--background-color-lighten);
+    color: var(--text-color);
 }
 
 pre.highlight * {
     -webkit-font-feature-settings: "case" 0, "liga" 0, "dlig" 0;
-    -moz-font-feature-settings: "case" 0, "liga" 0, "dlig" 0;
-    -o-font-feature-settings: "case" 0, "liga" 0, "dlig" 0;
     font-feature-settings: "case" 0, "liga" 0, "dlig" 0;
 }
